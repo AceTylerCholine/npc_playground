@@ -1,0 +1,289 @@
+original unit id,Wilcoxon Stat,p value,event1 vs event2,Recording,Subject,Event
+52,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+60,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+77,2.0,0.27332167829229814,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+105,4.0,0.7150006546880893,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+9,3.0,0.4652088184521418,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+0,4.0,0.7150006546880893,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+99,3.0,0.4652088184521418,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+53,1.0,0.28504940740261275,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+85,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+16,3.0,0.4652088184521418,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+39,3.0,0.4652088184521418,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+17,1.5,0.1974660733580187,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+15,5.0,1.0,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+27,5.0,1.0,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+11,4.5,0.8539232992870668,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+27,22.0,0.017378363446698287,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+53,27.5,0.11637190781649932,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+81,47.5,0.4757700308289149,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+52,58.0,0.6050949464540121,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+0,63.0,0.7959872153886274,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+69,61.0,0.7173808884143212,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+67,66.0,0.9176178742687193,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+74,27.0,0.19523087097038216,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+25,64.5,0.8563589864870352,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+7,31.0,0.055719324352751155,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+13,44.0,0.21460188629190957,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+79,49.5,0.8492919643195107,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+60,30.0,0.049421966979675956,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+68,42.0,0.3066241230648338,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+3,62.5,0.7760687891250492,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+32,61.5,0.7367054320164892,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+62,34.0,0.07873081119613402,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+78,44.5,0.22345358710490415,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+35,15.0,0.0589541985622435,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+64,53.0,0.437890005937993,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s win vs 10s baseline
+9,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+24,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+76,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+10,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+94,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+87,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+1,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+15,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+97,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+39,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+2,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+11,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+77,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s win vs 10s baseline
+21,86.0,0.47812547119613813,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+28,52.5,0.2549080416924536,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+53,87.5,0.5131816724903671,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+46,64.0,0.12585852473931722,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+45,62.0,0.10842674449200547,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+33,43.0,0.020633435105949553,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+109,62.0,0.18418074965866182,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+76,55.0,0.06195278853716299,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+39,53.0,0.05222204238661496,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+26,86.0,0.7171903998703537,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+44,67.0,0.15600357596610903,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+22,48.0,0.03334022025101753,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+48,57.0,0.07313806917102693,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+74,9.0,0.0003384546789562384,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+37,38.0,0.01237422010582018,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+58,62.0,0.10842674449200547,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+1,60.5,0.09662339774095825,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+23,34.0,0.00803442885556667,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+20,101.5,0.8960228268154501,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+29,80.0,0.545925247323124,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+115,80.0,0.810652953445403,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+59,76.5,0.695024109245362,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+51,37.0,0.011129014082381268,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+55,78.0,0.4939012303138084,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+27,88.0,0.5256531981764858,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+102,76.0,0.2789649507806645,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+78,43.0,0.32875509403802383,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+6,53.5,0.054294773065365,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+15,60.0,0.1587790833868492,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s win vs 10s baseline
+5,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+91,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+41,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+25,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+80,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+73,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+62,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+17,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+19,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+70,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+10,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+35,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+0,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+20,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+84,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+61,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+72,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+52,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+54,,,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s win vs 10s baseline
+52,18.0,0.009725523541639646,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+60,18.0,0.017058718531494516,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+77,48.0,0.3008925710547009,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+105,42.0,0.17873740941968186,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+9,63.0,0.7959872153886274,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+0,58.0,0.6047930082479747,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+99,28.0,0.038607051842430073,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+53,59.0,0.6416044302221346,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+85,52.0,0.6495629244115453,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+16,48.0,0.3010541816225988,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+39,48.5,0.3132195064700367,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+17,47.0,0.2773696133737247,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+15,51.5,0.6291916508585248,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+27,43.0,0.3341793830599732,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+11,5.0,0.0028510905621021063,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+27,1.0,0.14412703481601533,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+53,1.0,0.14412703481601533,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+81,1.0,0.14077277337135014,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+52,3.0,0.4652088184521418,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+0,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+69,4.0,0.7150006546880893,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+67,4.0,0.7150006546880893,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+74,2.0,0.5929800980174267,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+25,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+7,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+13,2.0,0.27332167829229814,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+79,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+60,4.0,0.7150006546880893,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+68,0.0,0.06788915486182899,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+3,3.0,0.4614509878333607,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+32,4.0,0.7150006546880893,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+62,4.0,0.7150006546880893,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+78,0.0,0.06559969214707187,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+35,1.0,0.28504940740261275,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+64,3.0,0.4652088184521418,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s lose vs 10s baseline
+9,94.0,0.681322326150025,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+24,77.5,0.4809735057899752,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+76,89.5,0.5626508656896176,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+10,76.5,0.2871272506036675,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+94,103.0,0.9404809859004396,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+87,87.5,0.5133653859579521,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+1,83.5,0.42213524686051795,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+15,57.0,0.214374303800544,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+97,69.0,0.47239920501692023,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+39,89.0,0.5501529499651694,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+2,18.5,0.3477548985675142,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+11,27.0,0.9591410100221092,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+77,34.0,0.24304120590031453,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s lose vs 10s baseline
+21,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+28,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+53,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+46,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+45,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+33,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+109,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+76,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+39,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+26,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+44,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+22,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+48,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+74,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+37,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+58,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+1,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+23,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+20,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+29,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+115,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+59,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+51,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+55,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+27,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+102,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+78,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+6,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+15,,,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s lose vs 10s baseline
+5,81.0,0.37026127045291435,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+91,101.0,0.8812927086539598,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+41,50.0,0.20961108740795276,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+25,5.0,0.0001890120699314349,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+80,46.0,0.027621013367531002,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+73,16.5,0.004501685369001637,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+62,53.5,0.2758485988385041,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+17,26.0,0.009562906117832044,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+19,78.0,0.49350729144997485,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+70,59.5,0.15303679136496792,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+10,68.5,0.28618603495802,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+35,81.0,0.5731689736636651,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+0,71.0,0.3340402120327719,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+20,103.0,0.9404550942366825,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+84,87.5,0.5133286597506505,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+61,90.5,0.856282687653342,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+72,4.0,0.0003831008726285678,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+52,94.0,0.6812698457572635,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+54,74.5,0.6316576519666053,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s lose vs 10s baseline
+52,0.0,8.857457687863547e-05,decreases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+60,0.0,8.857457687863547e-05,decreases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+77,14.0,0.0011078610833631874,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+105,68.0,0.2772406362261136,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+9,0.0,8.857457687863547e-05,decreases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+0,100.0,0.8519118437276034,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+99,11.0,0.000446759756327704,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+53,51.0,0.04332683521527354,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+85,34.5,0.04663565024840324,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+16,0.0,8.857457687863547e-05,decreases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+39,37.0,0.011129014082381268,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+17,86.0,0.47812547119613813,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+15,57.5,0.13119981276974466,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+27,33.0,0.02215208309404729,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+11,28.0,0.02151643209777338,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+27,17.0,0.0010188290449538871,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+53,72.0,0.5524048059522372,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+81,41.0,0.05262434185535094,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+52,10.0,0.00039023125084089363,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+0,85.0,0.6873736155096972,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+69,69.0,0.1789561131984324,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+67,27.0,0.003591821574029202,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+74,57.0,0.21404792797314653,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+25,100.0,0.8519245948146423,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+7,11.0,0.0004493369040712341,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+13,101.0,0.8812927086539598,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+79,36.0,0.00997693657899199,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+60,103.0,0.9404809859004396,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+68,31.5,0.033030848604101035,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+3,53.0,0.0909624041851633,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+32,81.5,0.5869064330193547,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+62,28.0,0.012264459334142642,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+78,73.0,0.585913748781291,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+35,68.5,0.2860396533698215,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+64,77.0,0.46871014932909294,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+9,74.0,0.9057940914405992,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+24,53.0,0.6907081048211274,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+76,67.0,0.958753862767215,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+10,35.0,0.049468494673688884,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+94,57.0,0.5692359921871408,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+87,49.5,0.2011408722334681,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+1,54.0,0.28655719556460246,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+15,31.0,0.03124928092967935,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+97,35.0,0.46293442741515556,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+39,45.0,0.13592202165385756,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+2,43.5,0.571987011115615,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+11,40.0,0.08401675251172278,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+77,60.0,0.43475617175843206,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1_1,10s both_rewarded vs 10s baseline
+21,81.0,0.37026127045291435,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+28,59.5,0.15224582700097047,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+53,99.5,0.8373005793912056,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+46,67.0,0.958753862767215,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+45,43.0,0.020633435105949553,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+33,48.0,0.03334022025101753,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+109,94.0,0.681322326150025,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+76,59.0,0.08592386002788616,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+39,41.0,0.02977446084184663,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+26,82.0,0.39053287003351767,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+44,79.0,0.3317228918094638,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+22,68.0,0.16718404068982073,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+48,103.0,0.9404809859004396,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+74,32.0,0.0064246026289671515,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+37,51.0,0.04380372353657391,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+58,42.0,0.018674874007415902,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+1,72.0,0.21795726558824124,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+23,49.0,0.03656128916854718,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+20,74.0,0.3979196159294409,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+29,62.0,0.4924592974852695,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+115,64.5,0.36013913132019415,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+59,76.0,0.27883929386259454,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+51,49.0,0.03656128916854718,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+55,60.0,0.09296312671248624,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+27,83.0,0.41146474044009396,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+102,44.0,0.022745072255317505,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+78,54.0,0.05684979400724547,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+6,62.5,0.11250058493899294,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+15,60.5,0.1649005619428866,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1_2,10s both_rewarded vs 10s baseline
+5,1.0,0.00010334649564653764,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+91,32.0,0.0064246026289671515,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+41,42.5,0.01962217373842447,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+25,0.0,0.00028905006410405866,decreases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+80,65.0,0.13535690010210896,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+73,0.0,8.857457687863547e-05,decreases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+62,12.5,0.001469275640120651,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+17,64.0,0.21221142185606556,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+19,0.0,8.857457687863547e-05,decreases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+70,42.0,0.1023862698760862,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+10,93.0,0.654018040668648,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+35,26.0,0.0031851432686599455,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+0,17.0,0.002852521233431342,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+20,87.0,0.5015540323300163,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+84,1.5,0.00016583319783092414,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+61,29.5,0.00477895829476747,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+72,1.5,0.00011035111729996059,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+52,10.0,0.0006201053427331174,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline
+54,0.0,8.857457687863547e-05,decreases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1_4,10s both_rewarded vs 10s baseline

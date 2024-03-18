@@ -1,3 +1,5 @@
 export/full_files/
 ephys_data.pkl
 rcecollection.pkl
+spike_analysis.pkl
+

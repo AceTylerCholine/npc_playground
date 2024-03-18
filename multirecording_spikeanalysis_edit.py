@@ -508,18 +508,28 @@ class EphysRecordingCollection:
     def make_collection(self):
         collection = {}
         for root, dirs, files in os.walk(self.path):
+<<<<<<< HEAD
             dirs.sort()  # Sort directories alphabetically
             for directory in dirs:
                 if directory.endswith("merged.rec"):
                     tempobject = EphysRecording(
                         os.path.join(root, directory, "phy"),  # Ensure the path is constructed with root
+=======
+            for directory in dirs:
+                if directory.endswith("merged.rec"):
+                    tempobject = EphysRecording(
+                        os.path.join(self.path, directory, "phy"),
+>>>>>>> b28895ef7fa24a5277b8e912461150bfc016e7c9
                         self.sampling_rate,
                     )
                     print(directory)
                     collection[directory] = tempobject
         self.collection = collection
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b28895ef7fa24a5277b8e912461150bfc016e7c9
     def get_by_name(self, name):
         return self.collection[name]
 

@@ -508,28 +508,16 @@ class EphysRecordingCollection:
     def make_collection(self):
         collection = {}
         for root, dirs, files in os.walk(self.path):
-<<<<<<< HEAD
-            dirs.sort()  # Sort directories alphabetically
-            for directory in dirs:
-                if directory.endswith("merged.rec"):
-                    tempobject = EphysRecording(
-                        os.path.join(root, directory, "phy"),  # Ensure the path is constructed with root
-=======
             for directory in dirs:
                 if directory.endswith("merged.rec"):
                     tempobject = EphysRecording(
                         os.path.join(self.path, directory, "phy"),
->>>>>>> b28895ef7fa24a5277b8e912461150bfc016e7c9
                         self.sampling_rate,
                     )
                     print(directory)
                     collection[directory] = tempobject
         self.collection = collection
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b28895ef7fa24a5277b8e912461150bfc016e7c9
     def get_by_name(self, name):
         return self.collection[name]
 
@@ -910,44 +898,25 @@ class SpikeAnalysis_MultiRecording:
         )
         return event_firing_rates
 
-    def __wilcox_baseline_v_event_stats__(
-        self, recording, event, equalize, baseline_window, offset,
-        exclude_offset, save
-         ):
+    def __wilcox_baseline_v_event_stats__(self, recording, event, equalize, baseline_window, offset, exclude_offset, save):
         """
-        calculates wilcoxon signed-rank test for average firing rates of two
-        windows: event vs baseline
-        baseline used is an amount of time immediately prior to the event
-        the resulting dataframe of wilcoxon stats and p values for every unit
+        Calculates Wilcoxon signed-rank test for average firing rates of two windows: event vs baseline.
+        The baseline used is an amount of time immediately prior to the event. The resulting dataframe of Wilcoxon stats and p values for every unit
         is added to a dictionary of dataframes for that recording.
-
-        Key for this dictionary item is
-        '{event} vs {baselinewindow}second baseline'
-        and the value is the dataframe.
-
-        Args (4 total, 4 required):
-            recording: EphysRecording instance, which recording the snippets
-                come from
-            event: str, event type of which ehpys snippets happen during
-            equalize: float, length (s) of events used by padding with post
-                event time
-                or trimming events all to equalize (s) long used in stat
-            baseline_window: int, default=0, seconds prior to start of event
-                used in stat
-            offset: int, adjusts end of baseline by offset(s) from onset of
-                behavior such that offset=2 adds the first two seconds of event
-                data into baseline while offest=-2 removes them from baseline
-                averages
-            exclude_offset: Boolean, default=False, if true excludes time
-                prior to onset and before offset in event averages, if false,
-                time between onset and offset are included in event averages
-            save: Boolean, True saves df as a value in the wilcox_df attribute
-                of the recording
-
-        Return (1):
-            wilcoxon_df: pandas dataframe, columns are unit ids,
-            row[0] are wilcoxon statistics and row[1] are p values
-
+        
+        Key for this dictionary item is '{event} vs {baseline_window} second baseline' and the value is the dataframe.
+        
+        Args:
+            recording: EphysRecording instance, which recording the snippets come from.
+            event: str, event type of which ehpys snippets happen during.
+            equalize: float, length (s) of events used by padding with post event time or trimming events all to equalize (s) long used in stat.
+            baseline_window: int, seconds prior to start of event used in stat.
+            offset: int, adjusts end of baseline by offset(s) from onset of behavior such that offset=2 adds the first two seconds of event data into baseline while offset=-2 removes them from baseline averages.
+            exclude_offset: Boolean, if true excludes time prior to onset and before offset in event averages, if false, time between onset and offset are included in event averages.
+            save: Boolean, True saves df as a value in the wilcox_df attribute of the recording.
+        
+        Returns:
+            wilcoxon_df: pandas dataframe, columns are unit ids, row[0] are wilcoxon statistics and row[1] are p values.
         """
         preevent_baselines = np.array([pre_event_window(event, baseline_window, offset) for event in recording.event_dict[event]])
         unit_baseline_firing_rates = self.__get_unit_event_firing_rates__(recording, preevent_baselines, equalize = (baseline_window + offset), pre_window = 0, post_window= 0)
@@ -958,28 +927,26 @@ class SpikeAnalysis_MultiRecording:
         unit_averages = {}
         for unit in unit_event_firing_rates.keys():
             try:
-                #calculates a single mean firing rate for each event and baseline 
                 event_averages = [mean(event) for event in unit_event_firing_rates[unit]]
                 preevent_averages = [mean(event) for event in unit_baseline_firing_rates[unit]]
-                # cut preevent averages for any events that have been cut at the end of the recording
-                min_length = min(len(event_averages), len(preevent_averages))
-                preevent_averages = preevent_averages[:min_length]
-                event_averages = event_averages[:min_length]
+                differences = np.array(event_averages) - np.array(preevent_averages)
+                if not np.any(differences):  # Check for zero differences
+                    print(f"All differences are zero for unit {unit}.")
+                    continue  # Skip the unit
                 unit_averages[unit] = [event_averages, preevent_averages]
             except StatisticsError:
                 print(f'Unit {unit} has {len(recording.unit_timestamps[unit])} spikes')
         wilcoxon_stats = {}
-        for unit in unit_averages.keys(): 
-            wilcoxon_stats[unit] = wilcoxon(unit_averages[unit][0], unit_averages[unit][1], method = 'approx')
-        wilcoxon_df = pd.DataFrame.from_dict(wilcoxon_stats, orient='index')
-        wilcoxon_df.columns = ['Wilcoxon Stat', 'p value']
-        wilcoxon_df['event1 vs event2'] = wilcoxon_df.apply(
-            lambda row: w_assessment(row['p value'], row['Wilcoxon Stat']),
-            axis=1)
+        for unit in unit_averages.keys():
+            stat, p_value = wilcoxon(unit_averages[unit][0], unit_averages[unit][1])
+            wilcoxon_stats[unit] = (stat, p_value)
+        wilcoxon_df = pd.DataFrame.from_dict(wilcoxon_stats, orient='index', columns=['Wilcoxon Stat', 'p value'])
+        wilcoxon_df['event1 vs event2'] = wilcoxon_df.apply(lambda row: w_assessment(row['p value'], row['Wilcoxon Stat']), axis=1)
         wilcox_key = f'{equalize}s {event} vs {baseline_window}s baseline'
         if save:
             recording.wilcox_dfs[wilcox_key] = wilcoxon_df
         return wilcoxon_df
+
 
     def wilcox_baseline_v_event_collection(
         self, event, equalize, baseline_window, offset=0,

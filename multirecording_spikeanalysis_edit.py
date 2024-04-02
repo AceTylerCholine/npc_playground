@@ -898,25 +898,44 @@ class SpikeAnalysis_MultiRecording:
         )
         return event_firing_rates
 
-    def __wilcox_baseline_v_event_stats__(self, recording, event, equalize, baseline_window, offset, exclude_offset, save):
+    def __wilcox_baseline_v_event_stats__(
+        self, recording, event, equalize, baseline_window, offset,
+        exclude_offset, save
+         ):
         """
-        Calculates Wilcoxon signed-rank test for average firing rates of two windows: event vs baseline.
-        The baseline used is an amount of time immediately prior to the event. The resulting dataframe of Wilcoxon stats and p values for every unit
+        calculates wilcoxon signed-rank test for average firing rates of two
+        windows: event vs baseline
+        baseline used is an amount of time immediately prior to the event
+        the resulting dataframe of wilcoxon stats and p values for every unit
         is added to a dictionary of dataframes for that recording.
-        
-        Key for this dictionary item is '{event} vs {baseline_window} second baseline' and the value is the dataframe.
-        
-        Args:
-            recording: EphysRecording instance, which recording the snippets come from.
-            event: str, event type of which ehpys snippets happen during.
-            equalize: float, length (s) of events used by padding with post event time or trimming events all to equalize (s) long used in stat.
-            baseline_window: int, seconds prior to start of event used in stat.
-            offset: int, adjusts end of baseline by offset(s) from onset of behavior such that offset=2 adds the first two seconds of event data into baseline while offset=-2 removes them from baseline averages.
-            exclude_offset: Boolean, if true excludes time prior to onset and before offset in event averages, if false, time between onset and offset are included in event averages.
-            save: Boolean, True saves df as a value in the wilcox_df attribute of the recording.
-        
-        Returns:
-            wilcoxon_df: pandas dataframe, columns are unit ids, row[0] are wilcoxon statistics and row[1] are p values.
+
+        Key for this dictionary item is
+        '{event} vs {baselinewindow}second baseline'
+        and the value is the dataframe.
+
+        Args (4 total, 4 required):
+            recording: EphysRecording instance, which recording the snippets
+                come from
+            event: str, event type of which ehpys snippets happen during
+            equalize: float, length (s) of events used by padding with post
+                event time
+                or trimming events all to equalize (s) long used in stat
+            baseline_window: int, default=0, seconds prior to start of event
+                used in stat
+            offset: int, adjusts end of baseline by offset(s) from onset of
+                behavior such that offset=2 adds the first two seconds of event
+                data into baseline while offest=-2 removes them from baseline
+                averages
+            exclude_offset: Boolean, default=False, if true excludes time
+                prior to onset and before offset in event averages, if false,
+                time between onset and offset are included in event averages
+            save: Boolean, True saves df as a value in the wilcox_df attribute
+                of the recording
+
+        Return (1):
+            wilcoxon_df: pandas dataframe, columns are unit ids,
+            row[0] are wilcoxon statistics and row[1] are p values
+
         """
         preevent_baselines = np.array([pre_event_window(event, baseline_window, offset) for event in recording.event_dict[event]])
         unit_baseline_firing_rates = self.__get_unit_event_firing_rates__(recording, preevent_baselines, equalize = (baseline_window + offset), pre_window = 0, post_window= 0)
@@ -927,26 +946,28 @@ class SpikeAnalysis_MultiRecording:
         unit_averages = {}
         for unit in unit_event_firing_rates.keys():
             try:
+                #calculates a single mean firing rate for each event and baseline 
                 event_averages = [mean(event) for event in unit_event_firing_rates[unit]]
                 preevent_averages = [mean(event) for event in unit_baseline_firing_rates[unit]]
-                differences = np.array(event_averages) - np.array(preevent_averages)
-                if not np.any(differences):  # Check for zero differences
-                    print(f"All differences are zero for unit {unit}.")
-                    continue  # Skip the unit
+                # cut preevent averages for any events that have been cut at the end of the recording
+                min_length = min(len(event_averages), len(preevent_averages))
+                preevent_averages = preevent_averages[:min_length]
+                event_averages = event_averages[:min_length]
                 unit_averages[unit] = [event_averages, preevent_averages]
             except StatisticsError:
                 print(f'Unit {unit} has {len(recording.unit_timestamps[unit])} spikes')
         wilcoxon_stats = {}
-        for unit in unit_averages.keys():
-            stat, p_value = wilcoxon(unit_averages[unit][0], unit_averages[unit][1])
-            wilcoxon_stats[unit] = (stat, p_value)
-        wilcoxon_df = pd.DataFrame.from_dict(wilcoxon_stats, orient='index', columns=['Wilcoxon Stat', 'p value'])
-        wilcoxon_df['event1 vs event2'] = wilcoxon_df.apply(lambda row: w_assessment(row['p value'], row['Wilcoxon Stat']), axis=1)
+        for unit in unit_averages.keys(): 
+            wilcoxon_stats[unit] = wilcoxon(unit_averages[unit][0], unit_averages[unit][1], method = 'approx')
+        wilcoxon_df = pd.DataFrame.from_dict(wilcoxon_stats, orient='index')
+        wilcoxon_df.columns = ['Wilcoxon Stat', 'p value']
+        wilcoxon_df['event1 vs event2'] = wilcoxon_df.apply(
+            lambda row: w_assessment(row['p value'], row['Wilcoxon Stat']),
+            axis=1)
         wilcox_key = f'{equalize}s {event} vs {baseline_window}s baseline'
         if save:
             recording.wilcox_dfs[wilcox_key] = wilcoxon_df
         return wilcoxon_df
-
 
     def wilcox_baseline_v_event_collection(
         self, event, equalize, baseline_window, offset=0,
@@ -1526,27 +1547,35 @@ class SpikeAnalysis_MultiRecording:
         zscored_events = {}
         significance_dict = {}
         for unit in unit_event_firing_rates:
-            #calculate average event across all events per unit
-            event_average = np.mean(unit_event_firing_rates[unit], axis = 0)
-            #one average for all preevents 
-            baseline_average = np.mean(unit_baseline_firing_rates[unit], axis = 0)
+            # Ensure inputs are at least 2D for np.mean to work as expected
+            event_rates_2d = np.atleast_2d(unit_event_firing_rates[unit])
+            baseline_rates_2d = np.atleast_2d(unit_baseline_firing_rates[unit])
+
+            # Calculate average event across all events per unit
+            event_average = np.mean(event_rates_2d, axis=0)
+
+            # Calculate one average for all pre-events
+            baseline_average = np.mean(baseline_rates_2d, axis=0)
             mew = np.mean(baseline_average)
             sigma = np.std(baseline_average)
-            if sigma != 0:
-                zscored_event = [(event_bin - mew)/sigma for event_bin in event_average]
-                if SD is not None:
-                    significance = ''
-                    if np.mean(zscored_event) < -(SD*sigma):
-                        significance = 'inhibitory'
-                    if np.mean(zscored_event) > SD*sigma:
-                        if significance == 'inhibitory':
-                            significance = 'both?'
-                        else:
-                            significance = 'excitatory'
-                    else:
-                        significance = 'not significant'
-                    significance_dict[unit] = significance
-                zscored_events[unit] = zscored_event
+
+            if np.isnan(sigma) or sigma == 0:
+                print(f"Unit {unit} has NaN or zero sigma, skipping.")
+                continue
+
+            zscored_event = (event_average - mew) / sigma
+
+            if SD is not None:
+                significance = 'not significant'
+                if np.mean(zscored_event) < -(SD*sigma):
+                    significance = 'inhibitory'
+                elif np.mean(zscored_event) > SD*sigma:
+                    significance = 'excitatory'
+
+                significance_dict[unit] = significance
+
+            zscored_events[unit] = zscored_event
+
         if SD is not None:
             return zscored_events, significance_dict
         else:
@@ -1723,7 +1752,7 @@ class SpikeAnalysis_MultiRecording:
             equalize: int, length (s) of event plotted
             baseline_window: int, length (s) of time prior to event onset plotted
             title: str, title of plot
-        
+
         Return:
             none    
         """
@@ -1736,24 +1765,33 @@ class SpikeAnalysis_MultiRecording:
             zscore_pop = np.array(list(zscored_unit_event_firing_rates.values()))
             mean_arr = np.mean(zscore_pop, axis=0)
             sem_arr = sem(zscore_pop, axis=0)
-            x = np.linspace(start=-baseline_window,stop=equalize,num=len(mean_arr))
-            plt.subplot(height_fig,2,i)
-            plt.plot(x, mean_arr, c= 'b')
-            plt.axvline(x=0, color='r', linestyle='--')
-            if offset != 0:
-                plt.axvline(x=offset, color='b', linestyle='--')
-            plt.fill_between(x, mean_arr-sem_arr, mean_arr+sem_arr, alpha=0.2)
-            plt.title(f'{recording_name} Population z-score')
-            plt.subplot(height_fig,2,i+1)
-            for unit in zscored_unit_event_firing_rates.keys():
-                plt.plot(x, zscored_unit_event_firing_rates[unit], linewidth = .5)
+
+            # Conditional check for mean_arr before plotting
+            if isinstance(mean_arr, np.ndarray) and mean_arr.ndim > 0 and len(mean_arr) > 0:  # Adjusted to > 0 to include arrays of length 1
+                x = np.linspace(start=-baseline_window, stop=equalize, num=len(mean_arr))
+                plt.subplot(height_fig, 2, i)
+                plt.plot(x, mean_arr, c='b')
                 plt.axvline(x=0, color='r', linestyle='--')
-                plt.title(f'{recording_name} Unit z-score')
                 if offset != 0:
                     plt.axvline(x=offset, color='b', linestyle='--')
+                plt.fill_between(x, mean_arr-sem_arr, mean_arr+sem_arr, alpha=0.2)
+                plt.title(f'{recording_name} Population z-score')
+            else:
+                print(f"Skipping population plot for {recording_name} due to insufficient data.")
+
+            plt.subplot(height_fig, 2, i+1)
+            for unit in zscored_unit_event_firing_rates.keys():
+                unit_firing_rate = zscored_unit_event_firing_rates[unit]
+                # Perform similar checks for individual units if necessary
+                if isinstance(unit_firing_rate, np.ndarray) and unit_firing_rate.ndim > 0 and len(unit_firing_rate) > 0:
+                    plt.plot(x, unit_firing_rate, linewidth = .5)
+                    plt.axvline(x=0, color='r', linestyle='--')
+                    if offset != 0:
+                        plt.axvline(x=offset, color='b', linestyle='--')
+            plt.title(f'{recording_name} Unit z-score')
             i +=2
         plt.suptitle(f'{equalize}s {event} vs {baseline_window}s baseline: Z-scored average')
-        plt.show() 
+        plt.show()
 
     def PCA_matrix_generation(
         self, equalize, pre_window, post_window=0, events=None, recordings=None

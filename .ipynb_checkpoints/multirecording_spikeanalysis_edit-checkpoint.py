@@ -508,28 +508,16 @@ class EphysRecordingCollection:
     def make_collection(self):
         collection = {}
         for root, dirs, files in os.walk(self.path):
-<<<<<<< HEAD
-            dirs.sort()  # Sort directories alphabetically
-            for directory in dirs:
-                if directory.endswith("merged.rec"):
-                    tempobject = EphysRecording(
-                        os.path.join(root, directory, "phy"),  # Ensure the path is constructed with root
-=======
             for directory in dirs:
                 if directory.endswith("merged.rec"):
                     tempobject = EphysRecording(
                         os.path.join(self.path, directory, "phy"),
->>>>>>> b28895ef7fa24a5277b8e912461150bfc016e7c9
                         self.sampling_rate,
                     )
                     print(directory)
                     collection[directory] = tempobject
         self.collection = collection
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b28895ef7fa24a5277b8e912461150bfc016e7c9
     def get_by_name(self, name):
         return self.collection[name]
 
@@ -1559,27 +1547,35 @@ class SpikeAnalysis_MultiRecording:
         zscored_events = {}
         significance_dict = {}
         for unit in unit_event_firing_rates:
-            #calculate average event across all events per unit
-            event_average = np.mean(unit_event_firing_rates[unit], axis = 0)
-            #one average for all preevents 
-            baseline_average = np.mean(unit_baseline_firing_rates[unit], axis = 0)
+            # Ensure inputs are at least 2D for np.mean to work as expected
+            event_rates_2d = np.atleast_2d(unit_event_firing_rates[unit])
+            baseline_rates_2d = np.atleast_2d(unit_baseline_firing_rates[unit])
+
+            # Calculate average event across all events per unit
+            event_average = np.mean(event_rates_2d, axis=0)
+
+            # Calculate one average for all pre-events
+            baseline_average = np.mean(baseline_rates_2d, axis=0)
             mew = np.mean(baseline_average)
             sigma = np.std(baseline_average)
-            if sigma != 0:
-                zscored_event = [(event_bin - mew)/sigma for event_bin in event_average]
-                if SD is not None:
-                    significance = ''
-                    if np.mean(zscored_event) < -(SD*sigma):
-                        significance = 'inhibitory'
-                    if np.mean(zscored_event) > SD*sigma:
-                        if significance == 'inhibitory':
-                            significance = 'both?'
-                        else:
-                            significance = 'excitatory'
-                    else:
-                        significance = 'not significant'
-                    significance_dict[unit] = significance
-                zscored_events[unit] = zscored_event
+
+            if np.isnan(sigma) or sigma == 0:
+                print(f"Unit {unit} has NaN or zero sigma, skipping.")
+                continue
+
+            zscored_event = (event_average - mew) / sigma
+
+            if SD is not None:
+                significance = 'not significant'
+                if np.mean(zscored_event) < -(SD*sigma):
+                    significance = 'inhibitory'
+                elif np.mean(zscored_event) > SD*sigma:
+                    significance = 'excitatory'
+
+                significance_dict[unit] = significance
+
+            zscored_events[unit] = zscored_event
+
         if SD is not None:
             return zscored_events, significance_dict
         else:
@@ -1756,7 +1752,7 @@ class SpikeAnalysis_MultiRecording:
             equalize: int, length (s) of event plotted
             baseline_window: int, length (s) of time prior to event onset plotted
             title: str, title of plot
-        
+
         Return:
             none    
         """
@@ -1769,24 +1765,33 @@ class SpikeAnalysis_MultiRecording:
             zscore_pop = np.array(list(zscored_unit_event_firing_rates.values()))
             mean_arr = np.mean(zscore_pop, axis=0)
             sem_arr = sem(zscore_pop, axis=0)
-            x = np.linspace(start=-baseline_window,stop=equalize,num=len(mean_arr))
-            plt.subplot(height_fig,2,i)
-            plt.plot(x, mean_arr, c= 'b')
-            plt.axvline(x=0, color='r', linestyle='--')
-            if offset != 0:
-                plt.axvline(x=offset, color='b', linestyle='--')
-            plt.fill_between(x, mean_arr-sem_arr, mean_arr+sem_arr, alpha=0.2)
-            plt.title(f'{recording_name} Population z-score')
-            plt.subplot(height_fig,2,i+1)
-            for unit in zscored_unit_event_firing_rates.keys():
-                plt.plot(x, zscored_unit_event_firing_rates[unit], linewidth = .5)
+
+            # Conditional check for mean_arr before plotting
+            if isinstance(mean_arr, np.ndarray) and mean_arr.ndim > 0 and len(mean_arr) > 0:  # Adjusted to > 0 to include arrays of length 1
+                x = np.linspace(start=-baseline_window, stop=equalize, num=len(mean_arr))
+                plt.subplot(height_fig, 2, i)
+                plt.plot(x, mean_arr, c='b')
                 plt.axvline(x=0, color='r', linestyle='--')
-                plt.title(f'{recording_name} Unit z-score')
                 if offset != 0:
                     plt.axvline(x=offset, color='b', linestyle='--')
+                plt.fill_between(x, mean_arr-sem_arr, mean_arr+sem_arr, alpha=0.2)
+                plt.title(f'{recording_name} Population z-score')
+            else:
+                print(f"Skipping population plot for {recording_name} due to insufficient data.")
+
+            plt.subplot(height_fig, 2, i+1)
+            for unit in zscored_unit_event_firing_rates.keys():
+                unit_firing_rate = zscored_unit_event_firing_rates[unit]
+                # Perform similar checks for individual units if necessary
+                if isinstance(unit_firing_rate, np.ndarray) and unit_firing_rate.ndim > 0 and len(unit_firing_rate) > 0:
+                    plt.plot(x, unit_firing_rate, linewidth = .5)
+                    plt.axvline(x=0, color='r', linestyle='--')
+                    if offset != 0:
+                        plt.axvline(x=offset, color='b', linestyle='--')
+            plt.title(f'{recording_name} Unit z-score')
             i +=2
         plt.suptitle(f'{equalize}s {event} vs {baseline_window}s baseline: Z-scored average')
-        plt.show() 
+        plt.show()
 
     def PCA_matrix_generation(
         self, equalize, pre_window, post_window=0, events=None, recordings=None

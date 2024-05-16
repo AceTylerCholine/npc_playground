@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from collections import defaultdict
 from scipy.stats import sem, ranksums, fisher_exact, wilcoxon
 from statistics import mean, StatisticsError
 from sklearn.decomposition import PCA
@@ -55,14 +56,14 @@ def get_firing_rate(spiketrain, smoothing_window, timebin):
     Args (3 total, 1 required):
         spiketrain: numpy array, in timebin (ms) bins
         smoothing_window: int, default=250, smoothing average window (ms)
-            min smoothing_window = 1
         timebin: int, default = 1, timebin (ms) of spiketrain
 
     Return (1):
         firing_rate: numpy array of firing rates in timebin sized windows
 
     """
-    weights = np.ones(smoothing_window) / smoothing_window * 1000 / timebin
+    smoothing_bins = int(smoothing_window / timebin)
+    weights = np.ones(smoothing_bins) / smoothing_bins * 1000 / timebin
     firing_rate = np.convolve(spiketrain, weights, mode="same")
 
     return firing_rate
@@ -442,9 +443,9 @@ class EphysRecording:
 
     def get_unit_timestamps(self):
         """
-        creates a dictionary of units to spike timestamps
-        keys are unit ids (int) and values are spike timestamps for
-        that unit (numpy arrays)and assigns dictionary to self.unit_timestamps
+        Creates a dictionary of units to spike timestamps.
+        Keys are unit ids (int) and values are spike timestamps for that unit (numpy arrays),
+        and assigns dictionary to self.unit_timestamps.
 
         Args:
             None
@@ -453,18 +454,14 @@ class EphysRecording:
             None
         """
 
-        unit_timestamps = {}
-        for spike in range(len(self.timestamps_var)):
-            if self.unit_array[spike] in unit_timestamps.keys():
-                timestamp_list = unit_timestamps[self.unit_array[spike]]
-                timestamp_list = np.append(
-                    timestamp_list, self.timestamps_var[spike]
-                )
-                unit_timestamps[self.unit_array[spike]] = timestamp_list
-            else:
-                unit_timestamps[self.unit_array[spike]] = self.timestamps_var[
-                    spike
-                ]
+        # Initialize a defaultdict for holding lists
+        unit_timestamps = defaultdict(list)
+        default_dict = defaultdict(lambda: np.array([]))
+
+        # Loop through each spike only once
+        for spike, unit in enumerate(self.unit_array):
+            # Append the timestamp to the list for the corresponding unit
+            unit_timestamps[unit].append(self.timestamps_var[spike])
 
         self.unit_timestamps = unit_timestamps
 
@@ -899,7 +896,7 @@ class SpikeAnalysis_MultiRecording:
         return event_firing_rates
 
     def __wilcox_baseline_v_event_stats__(
-        self, recording, event, equalize, baseline_window, offset,
+        self, recording_name, recording, event, equalize, baseline_window, offset,
         exclude_offset, save
          ):
         """
@@ -938,6 +935,10 @@ class SpikeAnalysis_MultiRecording:
 
         """
         preevent_baselines = np.array([pre_event_window(event, baseline_window, offset) for event in recording.event_dict[event]])
+        if len(recording.event_dict[event]) < 6:
+            print(f"Wilcoxon can't be done on {recording_name} {event}, because <6 samples")
+            return pd.DataFrame({'Wilcoxon Stat': [np.nan], 'p value': [np.nan]})
+            
         unit_baseline_firing_rates = self.__get_unit_event_firing_rates__(recording, preevent_baselines, equalize = (baseline_window + offset), pre_window = 0, post_window= 0)
         if exclude_offset:
             unit_event_firing_rates = self.__get_unit_event_firing_rates__(recording, event, equalize, 0, 0)
@@ -946,19 +947,27 @@ class SpikeAnalysis_MultiRecording:
         unit_averages = {}
         for unit in unit_event_firing_rates.keys():
             try:
-                #calculates a single mean firing rate for each event and baseline 
                 event_averages = [mean(event) for event in unit_event_firing_rates[unit]]
                 preevent_averages = [mean(event) for event in unit_baseline_firing_rates[unit]]
-                # cut preevent averages for any events that have been cut at the end of the recording
                 min_length = min(len(event_averages), len(preevent_averages))
                 preevent_averages = preevent_averages[:min_length]
                 event_averages = event_averages[:min_length]
                 unit_averages[unit] = [event_averages, preevent_averages]
+                if unit_averages[unit][0] == unit_averages[unit][1]:
+                    print(f"Wilcoxon can't be done on {recording_name} {event} {unit}, because baseline = event")
+                    unit_averages[unit] = [np.nan, np.nan]  # Set the unit's values to NaN
             except StatisticsError:
                 print(f'Unit {unit} has {len(recording.unit_timestamps[unit])} spikes')
+        
         wilcoxon_stats = {}
-        for unit in unit_averages.keys(): 
-            wilcoxon_stats[unit] = wilcoxon(unit_averages[unit][0], unit_averages[unit][1], method = 'approx')
+        for unit in unit_averages.keys():
+            if not np.isnan(unit_averages[unit][0]).any():  # Check if data is valid before running Wilcoxon
+                unit_averages_wil_array = np.array(unit_averages[unit][0]) - np.array(unit_averages[unit][1])
+                unit_averages_wil_array_no_z = unit_averages_wil_array[unit_averages_wil_array != 0]
+                wilcoxon_stats[unit] = wilcoxon(unit_averages_wil_array_no_z)
+            else:
+                wilcoxon_stats[unit] = {'Wilcoxon Stat': np.nan, 'p value': np.nan}
+                
         wilcoxon_df = pd.DataFrame.from_dict(wilcoxon_stats, orient='index')
         wilcoxon_df.columns = ['Wilcoxon Stat', 'p value']
         wilcoxon_df['event1 vs event2'] = wilcoxon_df.apply(
@@ -1015,7 +1024,7 @@ class SpikeAnalysis_MultiRecording:
             recording,
         ) in self.ephyscollection.collection.items():
             recording_df = self.__wilcox_baseline_v_event_stats__(
-                recording, event, equalize, baseline_window, offset, 
+                recording_name, recording, event, equalize, baseline_window, offset, 
                 exclude_offset, save
             )
             recording_df = recording_df.reset_index().rename(
@@ -1732,6 +1741,46 @@ class SpikeAnalysis_MultiRecording:
             self.ephyscollection.zscored_events[event_name] = master_df
         if plot:
             self.__zscore_plot__(zscored_dict, event, equalize, baseline_window, offset)
+
+    def generate_event_dataframe(self, baseline=10, equalize=10):
+        """
+        Generates a DataFrame with detailed event firing rates for each recording and each event,
+        explicitly differentiating between pre-event and event timebins and including unit numbers.
+        """
+        # List to store row data for DataFrame
+        data_rows = []
+        # Temporary variables to track the maximum length of pre-event and event timebins
+        max_pre_event_len = 0
+        max_event_len = 0
+        # Iterate through each recording
+        for recording_name, recording in self.ephyscollection.collection.items():
+            # Iterate through each event type in the recording
+            for event_name in recording.event_dict.keys():
+                event_fr = self.__get_unit_event_firing_rates__(recording, event_name, equalize, pre_window=0, post_window=0)
+                pre_event_fr, _ = self.__calc_preevent_baseline__(recording, baseline, offset=0, equalize=0, event=event_name)
+                # Ensure both event_fr and pre_event_fr are not None and have the same units
+                if event_fr and pre_event_fr:
+                    for unit in event_fr.keys():
+                        # Ensure unit is present in both pre_event and event data
+                        if unit in pre_event_fr:
+                            # Process each event occurrence for the unit
+                            for i, (event_arr, pre_event_arr) in enumerate(zip(event_fr[unit], pre_event_fr[unit])):
+                                # Flatten the arrays and create a row for the DataFrame
+                                event_data = list(pre_event_arr) + list(event_arr)
+                                row = [recording_name, event_name, i+1, unit] + event_data
+                                data_rows.append(row)
+                                # Update maximum lengths
+                                max_pre_event_len = max(max_pre_event_len, len(pre_event_arr))
+                                max_event_len = max(max_event_len, len(event_arr))
+        # Define column names with explicit differentiation
+        pre_event_columns = [f'Pre-event timebin {i+1}' for i in range(max_pre_event_len)]
+        event_columns = [f'Event timebin {i+1}' for i in range(max_event_len)]
+        columns = ['Recording', 'Event name', 'Event number', 'Unit number'] + pre_event_columns + event_columns
+        # Create DataFrame
+        event_df = pd.DataFrame(data_rows, columns=columns)
+        # Adjust for rows with less than max timebins by filling NaNs for missing timebins
+        event_df = event_df.fillna(np.nan)
+        return event_df
     
     def __zscore_plot__(self, zscored_dict, event, equalize, baseline_window, offset=0):
         """
@@ -2210,13 +2259,9 @@ class SpikeAnalysis_MultiRecording:
                 auc_rf = []
                 auc_glm_shuffle = []
                 auc_rf_shuffle = []
-                auc_svm = []
-                auc_svm_shuffle = []
                 prob_glm = []
                 prob_rf = []
-                prob_svm = []
                 prob_glm_shuffle = []
-                prob_svm_shuffle = []
                 prob_rf_shuffle = []
                 pos_fold = num_pos // num_fold
                 neg_fold = num_neg // num_fold
@@ -2244,25 +2289,15 @@ class SpikeAnalysis_MultiRecording:
                     pred_rf = model_rf.predict_proba(data_test[timebin, :, :].T)
                     prob_rf.append(pred_rf)
                     auc_rf.append(roc_auc_score(label_test, pred_rf[:, 1]))
-
-                    model_svm = LinearSVC(class_weight='balanced')
-                    model_svm.fit(data_train[timebin, :, :].T, label_train)
-                    pred_svm = model_svm.predict_proba(data_test[timebin, :, :].T)
-                    prob_svm.append(pred_svm)
-                    auc_svm.append(roc_auc_score(label_test, pred_svm[:, 1]))
                 auc[event]['glm'].append(auc_glm)
                 auc[event]['rf'].append(auc_rf)
-                auc[event]['svm'].append(auc_svm)
                 prob[event]['glm'].append(prob_glm)
                 prob[event]['rf'].append(prob_rf)
-                prob[event]['svm'].append(prob_svm)
                 for shuffle in range(num_shuffle):
                     temp_glm_shuffle = []
                     temp_rf_shuffle = []
-                    temp_svm_shuffle = []
                     temp_prob_glm_shuffle = []
                     temp_prob_rf_shuffle = [] 
-                    temp_prob_svm_shuffle = []
                     label_train = np.random.permutation(label_train)
                     for timebin in range(T):
                         model_glm = LogisticRegression(class_weight='balanced')
@@ -2276,27 +2311,17 @@ class SpikeAnalysis_MultiRecording:
                         pred_rf = model_rf.predict_proba(data_test[timebin, :, :].T)
                         temp_prob_rf_shuffle.append(pred_rf)
                         temp_rf_shuffle.append(roc_auc_score(label_test, pred_rf[:, 1]))
-
-                        model_svm = LinearSVC(class_weight='balanced')
-                        model_svm.fit(data_train[timebin, :, :].T, label_train)
-                        pred_svm = model_svm.predict_proba(data_test[timebin, :, :].T)
-                        temp_prob_svm_shuffle.append(pred_svm)
-                        temp_svm_shuffle.append(roc_auc_score(label_test, pred_svm[:, 1]))
                     auc_glm_shuffle.append(temp_glm_shuffle)
                     auc_rf_shuffle.append(temp_rf_shuffle)
-                    auc_svm_shuffle.append(temp_svm_shuffle)
                     prob_glm_shuffle.append(temp_prob_glm_shuffle)
                     prob_rf_shuffle.append(temp_prob_rf_shuffle)
-                    prob_svm_shuffle.append(temp_prob_svm_shuffle)
                 auc[event]['glm_shuffle'].append(auc_glm_shuffle)
                 auc[event]['rf_shuffle'].append(auc_rf_shuffle)
-                auc[event]['svm_shuffle'].append(auc_svm_shuffle)
                 prob[event]['glm_shuffle'].append(prob_glm_shuffle)
                 prob[event]['rf_shuffle'].append(prob_rf_shuffle)
-                prob[event]['svm_shuffle'].append(prob_svm_shuffle)
         if plot:
             self.__plot_auc__(auc, equalize, pre_window)
-        return auc, prob
+        return [auc, prob]
     
                 
     def __plot_auc__(self, auc_dict, equalize, pre_window):

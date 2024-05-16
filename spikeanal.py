@@ -45,14 +45,14 @@ def get_firing_rate(spiketrain, smoothing_window, timebin):
     Args (3 total, 1 required):
         spiketrain: numpy array, in timebin (ms) bins
         smoothing_window: int, default=250, smoothing average window (ms)
-            min smoothing_window = 1
         timebin: int, default = 1, timebin (ms) of spiketrain
 
     Return (1):
         firing_rate: numpy array of firing rates in timebin sized windows
 
     """
-    weights = np.ones(smoothing_window) / smoothing_window * 1000 / timebin
+    smoothing_bins = int(smoothing_window / timebin)
+    weights = np.ones(smoothing_bins) / smoothing_bins * 1000 / timebin
     firing_rate = np.convolve(spiketrain, weights, mode="same")
 
     return firing_rate
@@ -1600,12 +1600,12 @@ class SpikeAnalysis_MultiRecording:
         columns = ['Recording', 'Event name', 'Event number', 'Unit number'] + pre_event_columns + event_columns
 
         # Create DataFrame
-        df = pd.DataFrame(data_rows, columns=columns)
+        event_df = pd.DataFrame(data_rows, columns=columns)
 
         # Adjust for rows with less than max timebins by filling NaNs for missing timebins
-        df = df.fillna(np.nan)
+        event_df = event_df.fillna(np.nan)
 
-        return df
+        return event_df
 
     def __zscore_plot__(self, zscored_dict, event, equalize, baseline_window, offset=0):
         """

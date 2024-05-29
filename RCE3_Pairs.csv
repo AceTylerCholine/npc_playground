@@ -1,0 +1,47 @@
+Recording Type,Pair,Number of trials with pair
+comp then omission/alone,3.1-3.3,4
+comp then omission/alone,3.1-3.4,4
+comp then omission/alone,3.3-3.4,2
+comp then omission/alone,4.2-4.3,2
+comp then omission/alone,4.2-4.4,6
+comp then omission/alone,4.3-4.4,4
+comp then omission/alone,5.2-5.3,4
+comp then omission/alone,5.2-5.4,2
+comp then omission/alone,5.3-5.4,4
+Long comp,3.1-3.3,2
+Long comp,3.1-3.4,2
+Long comp,3.3-3.4,2
+Long comp,4.2-4.3,2
+Long comp,4.2-4.4,2
+Long comp,4.3-4.4,2
+Long comp,5.2-5.3,2
+Long comp,5.2-5.4,2
+Long comp,5.3-5.4,2
+Alone then comp,3.1-3.3,2
+Alone then comp,3.1-3.4,2
+Alone then comp,3.3-3.4,2
+Alone then comp,4.2-4.3,2
+Alone then comp,4.2-4.4,2
+Alone then comp,4.3-4.4,2
+Alone then comp,5.2-5.3,2
+Both Rewarded,3.1-3.3,2
+Both Rewarded,3.1-3.4,2
+Both Rewarded,3.3-3.4,2
+Both Rewarded,4.2-4.3,2
+Both Rewarded,4.2-4.4,2
+Both Rewarded,4.3-4.4,4
+Both Rewarded,5.2-5.3,4
+Novel,3.1-3.3,4
+Novel,3.1-3.4,6
+Novel,3.3-3.4,4
+Novel,4.2-4.3,6
+Novel,4.2-4.4,6
+Novel,4.3-4.4,4
+Novel,5.2-5.3,10
+Discriminatory,3.1-3.3,2
+Discriminatory,3.1-3.4,2
+Discriminatory,3.3-3.4,2
+Discriminatory,4.2-4.3,2
+Discriminatory,4.2-4.4,2
+Discriminatory,4.3-4.4,2
+Discriminatory,5.2-5.3,2

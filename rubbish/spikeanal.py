@@ -10,7 +10,6 @@ from collections import defaultdict
 from scipy.stats import sem, ranksums, fisher_exact, wilcoxon
 from statistics import mean, StatisticsError
 from sklearn.decomposition import PCA
-from mpl_toolkits.mplot3d import Axes3D
 from scipy.spatial.distance import euclidean
 from itertools import combinations
 from sklearn.metrics import roc_auc_score
@@ -20,13 +19,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
 
 
-def hex_2_rgb(hex_color):
-    rgb_color = tuple(int(hex_color[i:i+2], 16) / 255.0 for i in (1, 3, 5))
-    return rgb_color
-
-def get_spiketrain(
-    timestamp_array, last_timestamp, timebin=1, sampling_rate=20000
-):
+def get_spiketrain(timestamp_array, last_timestamp, timebin=1, sampling_rate=20000):
     """
     creates a spiketrain of ms time bins
     each array element is the number of spikes recorded per ms
@@ -42,9 +35,7 @@ def get_spiketrain(
         of spikes per timebin
     """
     hz_to_timebin = int(sampling_rate * 0.001 * timebin)
-    spiketrain = np.histogram(
-        timestamp_array, bins=np.arange(0, last_timestamp, hz_to_timebin)
-    )[0]
+    spiketrain = np.histogram(timestamp_array, bins=np.arange(0, last_timestamp, hz_to_timebin))[0]
     return spiketrain
 
 def get_firing_rate(spiketrain, smoothing_window, timebin):
@@ -66,39 +57,6 @@ def get_firing_rate(spiketrain, smoothing_window, timebin):
 
     return firing_rate
 
-def get_event_lengths(events):
-    """
-    calculates event lengths and longest event length
-
-    Args (1):
-        events:numpy array of [[start (ms), stop (ms)] x n events]
-
-    Returns (2):
-        max event length: int, longest event length in ms
-        event_lengths: lst of ints, event lengths in ms
-    """
-    event_lengths = []
-    for i in range(len(events[0]) + 1):
-        event_length = int(events[i][1] - events[i][0])
-        event_lengths.append(event_length)
-    return max(event_lengths), event_lengths, mean(event_lengths)
-
-def trim_event(event, max_event):
-    """
-    trims events to a given length
-    Args (2 total):
-        events:numpy array of [[start (ms), stop (ms)] x n events]
-        max_event: int, max length (s) of event desired
-
-    Returns (1):
-        events:numpy array of [[start (ms), stop (ms)] x n events]
-        with none longer than max_event
-    """
-    if event[1] - event[0] > (max_event * 1000):
-        event[1] = event[0] + (max_event * 1000)
-        event[0] = event[0]
-    return np.array(event)
-
 def pre_event_window(event, baseline_window, offset):
     """
     creates an event like object np.array[start(ms), stop(ms)] for
@@ -112,55 +70,8 @@ def pre_event_window(event, baseline_window, offset):
         preevent: np.array, [start(ms),stop(ms)] baseline_window(s)
             before event
     """
-    preevent = [event[0] - (baseline_window * 1000) - 1,
-                event[0] + (offset*1000) - 1]
+    preevent = [event[0] - (baseline_window * 1000) - 1, event[0] + (offset*1000) - 1]
     return np.array(preevent)
-
-def max_events(unit_dict, max_event, pre_window, timebin=1):
-    """
-    creates a dictionary with unit firing rates during events no longer
-    than max_event (s) (all longer events will be trimmed) and start times
-    adjusted to include pre_window time (s)
-
-    Args (4 total):
-        unit_dict: dict, unit id as keys,
-            and values are spiketrains or firing rates
-        max_event: int, longest event length (s) returned
-            (all longer events will be trimmed)
-        pre_window: int, amount of preevent time (s) returned
-        timebin: timebin (ms) of dict
-
-    Returns (1):
-        snippets_dict: dict, unit id as keys,
-            values are spiketrains or firing rates during
-        pre_window and up until max event
-    """
-    snippets_dict = {}
-    for unit in unit_dict.keys():
-        events = unit_dict[unit]
-        try:
-            events = [
-                event[0: int((pre_window + max_event) * 1000 / timebin)]
-                for event in events
-            ]
-        except IndexError:
-            pass
-        snippets_dict[unit] = events
-    return snippets_dict
-
-def get_unit_average_events(unit_event_snippets):
-    unit_average_event = {}
-    try:
-        for unit in unit_event_snippets.keys():
-            unit_average_event[unit] = np.mean(
-                unit_event_snippets[unit], axis=0
-            )
-    except KeyError:
-        for unit in unit_event_snippets.keys():
-            unit_average_event[unit] = np.mean(
-                unit_event_snippets[unit], axis=0
-            )
-    return unit_average_event
 
 def w_assessment(p_value, w):
     if p_value < 0.05:
@@ -270,16 +181,12 @@ def distance_bw_trajectories(trajectory1, trajectory2, mode):
         for session in range(trajectory1.shape[0]):
             dist_bw_tb = 0
             for i in range(trajectory1.shape[1]):
-                dist_bw_tb = dist_bw_tb + euclidean(
-                    trajectory1[session, i, :],
-                    trajectory2[session, i, :])
+                dist_bw_tb = dist_bw_tb + euclidean(trajectory1[session, i, :], trajectory2[session, i, :])
             geodesic_distances.append(dist_bw_tb)
     if mode == 'single':
         dist_bw_tb = 0
         for i in range(trajectory1.shape[0]):
-            dist_bw_tb = dist_bw_tb + euclidean(
-                trajectory1[i, :],
-                trajectory2[i, :])
+            dist_bw_tb = dist_bw_tb + euclidean(trajectory1[i, :], trajectory2[i, :])
         geodesic_distances.append(dist_bw_tb)
     return geodesic_distances
 
@@ -607,13 +514,7 @@ class SpikeAnalysis_MultiRecording:
 
     """
 
-    def __init__(
-        self,
-        ephyscollection,
-        smoothing_window=250,
-        timebin=1,
-        ignore_freq=0.01,
-    ):
+    def __init__(self, ephyscollection, smoothing_window=250, timebin=1, ignore_freq=0.01):
         self.ephyscollection = ephyscollection
         self.smoothing_window = smoothing_window
         self.timebin = timebin
@@ -765,15 +666,7 @@ class SpikeAnalysis_MultiRecording:
                 [unit_firing_rates[key] for key in unit_firing_rates]
             )
 
-    def __get_event_snippets__(
-        self,
-        recording,
-        event,
-        whole_recording,
-        equalize,
-        pre_window=0,
-        post_window=0,
-    ):
+    def __get_event_snippets__(self, recording, event, whole_recording, equalize, pre_window=0, post_window=0):
         """
         takes snippets of spiketrains or firing rates for events
         optional pre-event and post-event windows (s) may be included
@@ -822,9 +715,7 @@ class SpikeAnalysis_MultiRecording:
                     event_snippets.append(event_snippet)
         return event_snippets
 
-    def __get_unit_event_firing_rates__(
-        self, recording, event, equalize, pre_window=0, post_window=0
-    ):
+    def __get_unit_event_firing_rates__(self, recording, event, equalize, pre_window=0, post_window=0):
         """
         returns firing rates for events per unit
 
@@ -842,19 +733,10 @@ class SpikeAnalysis_MultiRecording:
         """
         unit_event_firing_rates = {}
         for unit in recording.unit_firing_rates.keys():
-            unit_event_firing_rates[unit] = self.__get_event_snippets__(
-                recording,
-                event,
-                recording.unit_firing_rates[unit],
-                equalize,
-                pre_window,
-                post_window,
-            )
+            unit_event_firing_rates[unit] = self.__get_event_snippets__(recording, event, recording.unit_firing_rates[unit], equalize, pre_window, post_window)
         return unit_event_firing_rates
 
-    def __get_event_firing_rates__(
-        self, recording, event, equalize, pre_window=0, post_window=0
-    ):
+    def __get_event_firing_rates__(self, recording, event, equalize, pre_window=0, post_window=0):
         """
         Grabs event firing rates from a whole recording through the recordings
         unit firing rate array (units by time bins)
@@ -871,20 +753,10 @@ class SpikeAnalysis_MultiRecording:
             event_firing_rates: list of arrays, where each array
             is units x timebins and list is len(no of events)
         """
-        event_firing_rates = self.__get_event_snippets__(
-            recording,
-            event,
-            recording.unit_firing_rate_array,
-            equalize,
-            pre_window,
-            post_window,
-        )
+        event_firing_rates = self.__get_event_snippets__(recording, event, recording.unit_firing_rate_array, equalize, pre_window, post_window)
         return event_firing_rates
 
-    def __wilcox_baseline_v_event_stats__(
-        self, recording_name, recording, event, equalize, baseline_window, offset,
-        exclude_offset, save
-         ):
+    def __wilcox_baseline_v_event_stats__(self, recording, event, equalize, baseline_window, offset, exclude_offset, save):
         """
         calculates wilcoxon signed-rank test for average firing rates of two
         windows: event vs baseline
@@ -921,10 +793,6 @@ class SpikeAnalysis_MultiRecording:
 
         """
         preevent_baselines = np.array([pre_event_window(event, baseline_window, offset) for event in recording.event_dict[event]])
-        if len(recording.event_dict[event]) < 6:
-            print(f"Wilcoxon can't be done on {recording_name} {event}, because <6 samples")
-            return None
-            
         unit_baseline_firing_rates = self.__get_unit_event_firing_rates__(recording, preevent_baselines, equalize = (baseline_window + offset), pre_window = 0, post_window= 0)
         if exclude_offset:
             unit_event_firing_rates = self.__get_unit_event_firing_rates__(recording, event, equalize, 0, 0)
@@ -933,41 +801,28 @@ class SpikeAnalysis_MultiRecording:
         unit_averages = {}
         for unit in unit_event_firing_rates.keys():
             try:
+                #calculates a single mean firing rate for each event and baseline 
                 event_averages = [mean(event) for event in unit_event_firing_rates[unit]]
                 preevent_averages = [mean(event) for event in unit_baseline_firing_rates[unit]]
+                # cut preevent averages for any events that have been cut at the end of the recording
                 min_length = min(len(event_averages), len(preevent_averages))
                 preevent_averages = preevent_averages[:min_length]
                 event_averages = event_averages[:min_length]
                 unit_averages[unit] = [event_averages, preevent_averages]
-                if unit_averages[unit][0] == unit_averages[unit][1]:
-                    print(f"Wilcoxon can't be done on {recording_name} {event} {unit}, because baseline = event")
-                    unit_averages[unit] = [np.nan, np.nan]  # Set the unit's values to NaN
             except StatisticsError:
                 print(f'Unit {unit} has {len(recording.unit_timestamps[unit])} spikes')
-        
         wilcoxon_stats = {}
-        for unit in unit_averages.keys():
-            if not np.isnan(unit_averages[unit][0]).any():  # Check if data is valid before running Wilcoxon
-                unit_averages_wil_array = np.array(unit_averages[unit][0]) - np.array(unit_averages[unit][1])
-                unit_averages_wil_array_no_z = unit_averages_wil_array[unit_averages_wil_array != 0]
-                wilcoxon_stats[unit] = wilcoxon(unit_averages_wil_array_no_z)
-            else:
-                wilcoxon_stats[unit] = {'Wilcoxon Stat': np.nan, 'p value': np.nan}
-                
+        for unit in unit_averages.keys(): 
+            wilcoxon_stats[unit] = wilcoxon(unit_averages[unit][0], unit_averages[unit][1], method = 'approx')
         wilcoxon_df = pd.DataFrame.from_dict(wilcoxon_stats, orient='index')
         wilcoxon_df.columns = ['Wilcoxon Stat', 'p value']
-        wilcoxon_df['event1 vs event2'] = wilcoxon_df.apply(
-            lambda row: w_assessment(row['p value'], row['Wilcoxon Stat']),
-            axis=1)
+        wilcoxon_df['event1 vs event2'] = wilcoxon_df.apply(lambda row: w_assessment(row['p value'], row['Wilcoxon Stat']), axis=1)
         wilcox_key = f'{equalize}s {event} vs {baseline_window}s baseline'
         if save:
             recording.wilcox_dfs[wilcox_key] = wilcoxon_df
         return wilcoxon_df
 
-    def wilcox_baseline_v_event_collection(
-        self, event, equalize, baseline_window, offset=0,
-        exclude_offset=False, plot=True, save=False
-    ):
+    def wilcox_baseline_v_event_collection(self, event, equalize, baseline_window, offset=0, exclude_offset=False, plot=True, save=False):
         """
         Runs a wilcoxon signed rank test on all good units of
         all recordings in the collection on the
@@ -1005,46 +860,25 @@ class SpikeAnalysis_MultiRecording:
                 Wilcoxon stats, p values, orginal unit ids, recording
         """
         is_first = True
-        master_df = None
-        for (
-            recording_name,
-            recording,
-        ) in self.ephyscollection.collection.items():
-            recording_df = self.__wilcox_baseline_v_event_stats__(
-                recording_name, recording, event, equalize, baseline_window, offset, 
-                exclude_offset, save
-            )
-            if recording_df is not None:  # Only process if sample size >5
-                recording_df = recording_df.reset_index().rename(
-                    columns={"index": "original unit id"}
-                )
-                recording_df["Recording"] = recording_name
-                recording_df["Subject"] = recording.subject
-                recording_df[
-                    "Event"
-                ] = f"{equalize}s {event} vs {baseline_window}s baseline"
-                if is_first:
-                    master_df = recording_df
-                    is_first = False
-                else:
-                    master_df = pd.concat(
-                        [master_df, recording_df], axis=0
-                    ).reset_index(drop=True)
-        if master_df is not None:
-            wilcox_key = f"{equalize}s {event} vs {baseline_window}s baseline"
-            if save:
-                self.ephyscollection.wilcox_dfs[wilcox_key] = master_df
-            if plot:
-                self.__wilcox_baseline_v_event_plots__(
-                    master_df, event, equalize, baseline_window, offset
-                )
-            return master_df
-        else:
-            return None
+        for (recording_name, recording) in self.ephyscollection.collection.items():
+            recording_df = self.__wilcox_baseline_v_event_stats__(recording, event, equalize, baseline_window, offset, exclude_offset, save)
+            recording_df = recording_df.reset_index().rename(columns={"index": "original unit id"})
+            recording_df["Recording"] = recording_name
+            recording_df["Subject"] = recording.subject
+            recording_df["Event"] = f"{equalize}s {event} vs {baseline_window}s baseline"
+            if is_first:
+                master_df = recording_df
+                is_first = False
+            else:
+                master_df = pd.concat([master_df, recording_df], axis=0).reset_index(drop=True)
+        wilcox_key = f"{equalize}s {event} vs {baseline_window}s baseline"
+        if save:
+            self.ephyscollection.wilcox_dfs[wilcox_key] = master_df
+        if plot:
+            self.__wilcox_baseline_v_event_plots__(master_df, event, equalize, baseline_window, offset)
+        return master_df
 
-    def fishers_exact_wilcox(self, event1, event2, equalize, event3=None, 
-                             baseline_window=None, offset=0,
-                             exclude_offset=False, save=False):
+    def fishers_exact_wilcox(self, event1, event2, equalize, event3=None, baseline_window=None, offset=0, exclude_offset=False, save=False):
         """
         Calculates fisher's exact test where the contigency matrix is made up
         of number of significant units (from wilcoxon signed rank test of
@@ -1087,27 +921,11 @@ class SpikeAnalysis_MultiRecording:
             print('Function can only handle one baseline for comparison.')
             print('baseline_window OR event3 must equal None')
         if event3 is None:
-            df1 = self.wilcox_baseline_v_event_collection(event1, equalize,
-                                                          baseline_window,
-                                                          offset,
-                                                          exclude_offset,
-                                                          plot=False,
-                                                          save=False)
-            df2 = self.wilcox_baseline_v_event_collection(event2, equalize,
-                                                          baseline_window,
-                                                          offset,
-                                                          exclude_offset, 
-                                                          plot=False,
-                                                          save=False)
+            df1 = self.wilcox_baseline_v_event_collection(event1, equalize, baseline_window, offset, exclude_offset, plot=False, save=False)
+            df2 = self.wilcox_baseline_v_event_collection(event2, equalize, baseline_window, offset, exclude_offset, plot=False, save=False)
         else:
-            df1 = self.wilcox_event_v_event_collection(event1, event3,
-                                                       equalize,
-                                                       plot=False,
-                                                       save=False)
-            df2 = self.wilcox_event_v_event_collection(event2, event3,
-                                                       equalize,
-                                                       plot=False,
-                                                       save=False)
+            df1 = self.wilcox_event_v_event_collection(event1, event3, equalize, plot=False, save=False)
+            df2 = self.wilcox_event_v_event_collection(event2, event3, equalize, plot=False, save=False)
         sig1 = (df1['p value'] < 0.05).sum()
         not_sig1 = (df1['p value'] > 0.05).sum()
         sig2 = (df2['p value'] < 0.05).sum()
@@ -1121,9 +939,7 @@ class SpikeAnalysis_MultiRecording:
                 self.ephyscollection.fishers_exact[f'{event1} v {event2}: {equalize}s, {event3} baseline'] = [odds_ratio, p_value, sig1, not_sig1, sig2, not_sig2]
         return odds_ratio, p_value, contingency_matrix
 
-    def __wilcox_baseline_v_event_plots__(
-        self, master_df, event, equalize, baseline_window, offset
-    ):
+    def __wilcox_baseline_v_event_plots__(self, master_df, event, equalize, baseline_window, offset):
         """
         plots event triggered average firing rates for units with significant
         wilcoxon signed rank tests (p value <0.05) for event v baseline window.
@@ -1141,56 +957,34 @@ class SpikeAnalysis_MultiRecording:
         Returns:
             none
         """
-        for (
-            recording_name,
-            recording,
-        ) in self.ephyscollection.collection.items():
+        for (recording_name, recording) in self.ephyscollection.collection.items():
             wilcoxon_df = master_df[master_df["Recording"] == recording_name]
             units_to_plot = []
             for unit in wilcoxon_df["original unit id"].tolist():
-                if (
-                    wilcoxon_df.loc[
-                        wilcoxon_df["original unit id"] == unit, "p value"
-                    ].values[0]
-                    < 0.07
-                ):
+                if (wilcoxon_df.loc[wilcoxon_df["original unit id"] == unit, "p value"].values[0] < 0.07):
                     units_to_plot.append(unit)
             no_plots = len(units_to_plot)
             height_fig = math.ceil(no_plots / 3)
             i = 1
             plt.figure(figsize=(20, 4 * height_fig))
-            unit_event_firing_rates = self.__get_unit_event_firing_rates__(
-                recording, event, equalize, baseline_window, 0
-            )
+            unit_event_firing_rates = self.__get_unit_event_firing_rates__(recording, event, equalize, baseline_window, 0)
             for unit in units_to_plot:
                 mean_arr = np.mean(unit_event_firing_rates[unit], axis=0)
                 sem_arr = sem(unit_event_firing_rates[unit], axis=0)
-                p_value = wilcoxon_df.loc[
-                    wilcoxon_df["original unit id"] == unit, "p value"
-                ].values[0]
-                x = np.linspace(
-                    start=-baseline_window, stop=equalize, num=len(mean_arr)
-                )
+                p_value = wilcoxon_df.loc[wilcoxon_df["original unit id"] == unit, "p value"].values[0]
+                x = np.linspace(start=-baseline_window, stop=equalize, num=len(mean_arr))
                 plt.subplot(height_fig, 3, i)
                 plt.plot(x, mean_arr, c="b")
                 if offset != 0:
                     plt.axvline(x=offset, color='b', linestyle='--')
                 plt.axvline(x=0, color="r", linestyle="--")
-                plt.fill_between(
-                    x, mean_arr - sem_arr, mean_arr + sem_arr, alpha=0.2
-                )
+                plt.fill_between(x, mean_arr - sem_arr, mean_arr + sem_arr, alpha=0.2)
                 plt.title(f"Unit {unit} Average (p={p_value})")
                 i += 1
-            plt.suptitle(
-                f"{recording_name}: "
-                + f"{equalize}s {event} vs {baseline_window}s baseline"
-            )
+            plt.suptitle(f"{recording_name}: " + f"{equalize}s {event} vs {baseline_window}s baseline")
             plt.show()
 
-    def wilcox_baseline_v_event_unit(
-        self, recording_name, unit_id, events,
-        equalize, baseline_window, offset, exclude_offset=False
-    ):
+    def wilcox_baseline_v_event_unit(self, recording_name, unit_id, events, equalize, baseline_window, offset, exclude_offset=False):
         """
         plots event triggered average firing rates for units with significant
         wilcoxon signed rank tests (p value <0.05) for event v baseline window.
@@ -1214,49 +1008,26 @@ class SpikeAnalysis_MultiRecording:
         plt.figure(figsize=(15, 4 * height_fig))
         recording = self.ephyscollection.get_by_name(recording_name)
         for event in events:
-            temp_master_df = self.wilcox_baseline_v_event_collection(
-                event,
-                equalize,
-                baseline_window,
-                offset,
-                exclude_offset,
-                plot=False,
-                save=False)
-            master_df = temp_master_df[(temp_master_df['Recording'] ==
-                                        recording_name) & (
-                                            temp_master_df['original unit id']
-                                            == unit_id)]
+            temp_master_df = self.wilcox_baseline_v_event_collection(event, equalize, baseline_window, offset, exclude_offset, plot=False, save=False)
+            master_df = temp_master_df[(temp_master_df['Recording'] == recording_name) & (temp_master_df['original unit id'] == unit_id)]
             master_df = master_df.reset_index()
-            unit_event_firing_rates = self.__get_unit_event_firing_rates__(
-                recording,
-                event,
-                equalize,
-                baseline_window,
-                0)
+            unit_event_firing_rates = self.__get_unit_event_firing_rates__(recording, event, equalize, baseline_window, 0)
             mean_arr = np.mean(unit_event_firing_rates[unit_id], axis=0)
             sem_arr = sem(unit_event_firing_rates[unit_id], axis=0)
             p_value = master_df["p value"].values[0]
-            x = np.linspace(
-                start=-baseline_window, stop=equalize, num=len(mean_arr)
-            )
+            x = np.linspace(start=-baseline_window, stop=equalize, num=len(mean_arr))
             plt.subplot(height_fig, 2, i)
             plt.plot(x, mean_arr, c="b")
             if offset != 0:
                 plt.axvline(x=offset, color='b', linestyle='--')
             plt.axvline(x=0, color="r", linestyle="--")
-            plt.fill_between(
-                x, mean_arr - sem_arr, mean_arr + sem_arr, alpha=0.2
-            )
+            plt.fill_between(x, mean_arr - sem_arr, mean_arr + sem_arr, alpha=0.2)
             plt.title(f"{event}: p={p_value}")
             i += 1
-        plt.suptitle(
-            f"{recording_name}: {unit_id}"
-        )
+        plt.suptitle(f"{recording_name}: {unit_id}")
         plt.show()
 
-    def __wilcoxon_event_v_event_stats__(
-        self, recording, event1, event2, equalize, save=False
-    ):
+    def __wilcoxon_event_v_event_stats__(self, recording, event1, event2, equalize, save=False):
         """
         calculates wilcoxon signed-rank test for average firing rates between
         two events for a given recording. the resulting dataframe of wilcoxon stats
@@ -1280,46 +1051,29 @@ class SpikeAnalysis_MultiRecording:
             row[0] are wilcoxon statistics and row[1] are p values
 
         """
-        unit_event1_firing_rates = self.__get_unit_event_firing_rates__(
-            recording, event1, equalize, 0, 0
-        )
-        unit_event2_firing_rates = self.__get_unit_event_firing_rates__(
-            recording, event2, equalize, 0, 0
-        )
+        unit_event1_firing_rates = self.__get_unit_event_firing_rates__(recording, event1, equalize, 0, 0)
+        unit_event2_firing_rates = self.__get_unit_event_firing_rates__(recording, event2, equalize, 0, 0)
         unit_averages = {}
         for unit in unit_event1_firing_rates.keys():
             try:
-                event1_averages = [
-                    mean(event) for event in unit_event1_firing_rates[unit]
-                ]
-                event2_averages = [
-                    mean(event) for event in unit_event2_firing_rates[unit]
-                ]
+                event1_averages = [mean(event) for event in unit_event1_firing_rates[unit]]
+                event2_averages = [mean(event) for event in unit_event2_firing_rates[unit]]
                 unit_averages[unit] = [event1_averages, event2_averages]
             except StatisticsError:
-                print(
-                    f"Unit {unit} has {len(recording.unit_timestamps[unit])} spikes"
-                )
+                print(f"Unit {unit} has {len(recording.unit_timestamps[unit])} spikes")
         wilcoxon_stats = {}
         for unit in unit_averages.keys():
-            wilcoxon_stats[unit] = ranksums(
-                unit_averages[unit][0], unit_averages[unit][1]
-            )
+            wilcoxon_stats[unit] = ranksums(unit_averages[unit][0], unit_averages[unit][1])
         wilcoxon_df = pd.DataFrame.from_dict(wilcoxon_stats, orient="index")
         wilcoxon_df.columns = ["Wilcoxon Stat", "p value"]
-        wilcoxon_df["event1 vs event2"] = wilcoxon_df.apply(
-            lambda row: w_assessment(row["p value"], row["Wilcoxon Stat"]),
-            axis=1,
-        )
+        wilcoxon_df["event1 vs event2"] = wilcoxon_df.apply(lambda row: w_assessment(row["p value"], row["Wilcoxon Stat"]), axis=1)
         wilcoxon_df
         wilcox_key = f"{event1} vs {event2} ({equalize}s)"
         if save:
             recording.wilcox_dfs[wilcox_key] = wilcoxon_df
         return wilcoxon_df
 
-    def wilcox_event_v_event_collection(
-        self, event1, event2, equalize, pre_window, plot=True, save=False
-    ):
+    def wilcox_event_v_event_collection(self, event1, event2, equalize, pre_window, plot=True, save=False):
         """
         Runs a wilcoxon signed rank test on all good units of
         all recordings in the collection on the
@@ -1346,16 +1100,9 @@ class SpikeAnalysis_MultiRecording:
             subject and the events given
         """
         is_first = True
-        for (
-            recording_name,
-            recording,
-        ) in self.ephyscollection.collection.items():
-            recording_df = self.__wilcoxon_event_v_event_stats__(
-                recording, event1, event2, equalize, save
-            )
-            recording_df = recording_df.reset_index().rename(
-                columns={"index": "original unit id"}
-            )
+        for (recording_name, recording) in self.ephyscollection.collection.items():
+            recording_df = self.__wilcoxon_event_v_event_stats__(recording, event1, event2, equalize, save)
+            recording_df = recording_df.reset_index().rename(columns={"index": "original unit id"})
             recording_df["Recording"] = recording_name
             recording_df["Subject"] = recording.subject
             recording_df["Event"] = f"{event1 } vs {event2} ({equalize}s)"
@@ -1363,20 +1110,14 @@ class SpikeAnalysis_MultiRecording:
                 master_df = recording_df
                 is_first = False
             else:
-                master_df = pd.concat(
-                    [master_df, recording_df], axis=0
-                ).reset_index(drop=True)
+                master_df = pd.concat([master_df, recording_df], axis=0).reset_index(drop=True)
         wilcox_key = f"{event1} vs {event2} ({equalize}s)"
         if save:
             self.ephyscollection.wilcox_dfs[wilcox_key] = master_df
         if plot:
-            self.__wilcox_event_v_event_plots__(
-                master_df, event1, event2, equalize, pre_window
-            )
+            self.__wilcox_event_v_event_plots__(master_df, event1, event2, equalize, pre_window)
 
-    def __wilcox_event_v_event_plots__(
-        self, master_df, event1, event2, equalize, pre_window
-    ):
+    def __wilcox_event_v_event_plots__(self, master_df, event1, event2, equalize, pre_window):
         """
         plots event triggered average firing rates for units with significant wilcoxon
         signed rank sums (p value < 0.05) for event1 vs event2
@@ -1391,61 +1132,35 @@ class SpikeAnalysis_MultiRecording:
         Returns:
             none
         """
-        for (
-            recording_name,
-            recording,
-        ) in self.ephyscollection.collection.items():
+        for (recording_name, recording) in self.ephyscollection.collection.items():
             wilcoxon_df = master_df[master_df["Recording"] == recording_name]
             units_to_plot = []
             for unit in wilcoxon_df["original unit id"].tolist():
-                if (
-                    wilcoxon_df.loc[
-                        wilcoxon_df["original unit id"] == unit, "p value"
-                    ].values[0]
-                    < 0.05
-                ):
+                if (wilcoxon_df.loc[wilcoxon_df["original unit id"] == unit, "p value"].values[0] < 0.05):
                     units_to_plot.append(unit)
             no_plots = len(units_to_plot)
             height_fig = math.ceil(no_plots / 3)
             i = 1
             plt.figure(figsize=(20, 4 * height_fig))
-            unit_event1_firing_rates = self.__get_unit_event_firing_rates__(
-                recording, event1, equalize, pre_window, 0
-            )
-            unit_event2_firing_rates = self.__get_unit_event_firing_rates__(
-                recording, event2, equalize, pre_window, 0
-            )
+            unit_event1_firing_rates = self.__get_unit_event_firing_rates__(recording, event1, equalize, pre_window, 0)
+            unit_event2_firing_rates = self.__get_unit_event_firing_rates__(recording, event2, equalize, pre_window, 0)
             for unit in units_to_plot:
                 mean1_arr = np.mean(unit_event1_firing_rates[unit], axis=0)
                 sem1_arr = sem(unit_event1_firing_rates[unit], axis=0)
                 mean2_arr = np.mean(unit_event2_firing_rates[unit], axis=0)
                 sem2_arr = sem(unit_event2_firing_rates[unit], axis=0)
-                p_value = wilcoxon_df.loc[
-                    wilcoxon_df["original unit id"] == unit, "p value"
-                ].values[0]
-                x = np.linspace(
-                    start=-pre_window, stop=equalize, num=len(mean1_arr)
-                )
+                p_value = wilcoxon_df.loc[wilcoxon_df["original unit id"] == unit, "p value"].values[0]
+                x = np.linspace(start=-pre_window, stop=equalize, num=len(mean1_arr))
                 plt.subplot(height_fig, 3, i)
                 plt.plot(x, mean1_arr, c="b", label=event1)
-                plt.fill_between(
-                    x, mean1_arr - sem1_arr, mean1_arr + sem1_arr, alpha=0.2
-                )
+                plt.fill_between(x, mean1_arr - sem1_arr, mean1_arr + sem1_arr, alpha=0.2)
                 plt.plot(x, mean2_arr, c="k", label=event2)
-                plt.fill_between(
-                    x,
-                    mean2_arr - sem2_arr,
-                    mean2_arr + sem2_arr,
-                    alpha=0.2,
-                    color="k",
-                )
+                plt.fill_between(x, mean2_arr - sem2_arr, mean2_arr + sem2_arr, alpha=0.2, color="k")
                 plt.axvline(x=0, color="r", linestyle="--")
                 plt.title(f"Unit {unit} Average (p={p_value})")
                 plt.legend()
                 i += 1
-            plt.suptitle(
-                f"{recording_name}: " + f"{event1} vs {event2} ({equalize}s)"
-            )
+            plt.suptitle(f"{recording_name}: " + f"{event1} vs {event2} ({equalize}s)")
             plt.show()
 
     def __global_baseline__(self, recording, event, equalize, pre_window, global_timebin):
@@ -1467,12 +1182,10 @@ class SpikeAnalysis_MultiRecording:
             event_name: str, event name for caching 
         """
         unit_firing_rates = recording.unit_firing_rates 
-        unit_baseline_firing_rates = {
-            key: chunk_array(value, global_timebin, self.timebin) for key, value in unit_firing_rates.items()
-            }
+        unit_baseline_firing_rates = {key: chunk_array(value, global_timebin, self.timebin) for key, value in unit_firing_rates.items()}
         event_name = f'{equalize}s {event} w/ pre {pre_window}s vs global ({global_timebin})'
         return unit_baseline_firing_rates, event_name 
-    
+
     def __event_baseline__(self, recording, event, baseline, equalize, pre_window):
         """
         calculates baseline firing rate dicitionaries of baseline events
@@ -1547,32 +1260,78 @@ class SpikeAnalysis_MultiRecording:
         zscored_events = {}
         significance_dict = {}
         for unit in unit_event_firing_rates:
-            #calculate average event across all events per unit
-            event_average = np.mean(unit_event_firing_rates[unit], axis = 0)
-            #one average for all preevents 
-            baseline_average = np.mean(unit_baseline_firing_rates[unit], axis = 0)
+            # Ensure inputs are at least 2D for np.mean to work as expected
+            event_rates_2d = np.atleast_2d(unit_event_firing_rates[unit])
+            baseline_rates_2d = np.atleast_2d(unit_baseline_firing_rates[unit])
+
+            # Calculate average event across all events per unit
+            event_average = np.mean(event_rates_2d, axis=0)
+
+            # Calculate one average for all pre-events
+            baseline_average = np.mean(baseline_rates_2d, axis=0)
             mew = np.mean(baseline_average)
             sigma = np.std(baseline_average)
-            if sigma != 0:
-                zscored_event = [(event_bin - mew)/sigma for event_bin in event_average]
-                if SD is not None:
-                    significance = ''
-                    if np.mean(zscored_event) < -(SD*sigma):
-                        significance = 'inhibitory'
-                    if np.mean(zscored_event) > SD*sigma:
-                        if significance == 'inhibitory':
-                            significance = 'both?'
-                        else:
-                            significance = 'excitatory'
-                    else:
-                        significance = 'not significant'
-                    significance_dict[unit] = significance
-                zscored_events[unit] = zscored_event
+
+            if np.isnan(sigma) or sigma == 0:
+                print(f"Unit {unit} has NaN or zero sigma, skipping.")
+                continue
+
+            zscored_event = (event_average - mew) / sigma
+
+            if SD is not None:
+                significance = 'not significant'
+                if np.mean(zscored_event) < -(SD*sigma):
+                    significance = 'inhibitory'
+                elif np.mean(zscored_event) > SD*sigma:
+                    significance = 'excitatory'
+
+                significance_dict[unit] = significance
+
+            zscored_events[unit] = zscored_event
+
         if SD is not None:
             return zscored_events, significance_dict
         else:
             return zscored_events
-    
+
+    def __zscore_event2__(self, recording, unit_event_firing_rates, unit_baseline_firing_rates, SD = None):
+        zscored_events = {}
+        significance_dict = {}
+        for unit in unit_event_firing_rates:
+            # Ensure inputs are at least 2D for np.mean to work as expected
+            event_rates_2d = np.atleast_2d(unit_event_firing_rates[unit])
+            baseline_rates_2d = np.atleast_2d(unit_baseline_firing_rates[unit])
+
+            # Calculate average event across all events per unit
+            event_average = np.mean(event_rates_2d, axis=0)
+
+            # Calculate one average for all pre-events
+            baseline_average = np.mean(baseline_rates_2d, axis=0)
+            mew = np.mean(baseline_average)
+            sigma = np.std(baseline_average)
+
+            if np.isnan(sigma) or sigma == 0:
+                print(f"Unit {unit} has NaN or zero sigma, skipping.")
+                continue
+
+            zscored_event = (event_average - mew) / sigma
+
+            if SD is not None:
+                significance = 'not significant'
+                if np.mean(zscored_event) < -(SD*sigma):
+                    significance = 'inhibitory'
+                elif np.mean(zscored_event) > SD*sigma:
+                    significance = 'excitatory'
+
+                significance_dict[unit] = significance
+
+            zscored_events[unit] = zscored_event
+
+        if SD is not None:
+            return zscored_events, significance_dict
+        else:
+            return zscored_events
+
     def __make_zscore_df__(self, zscored_events, recording, recording_name, event_name, master_df =None, sig_dict = None):
         """
         Args(4 required, 6 total):
@@ -1641,13 +1400,13 @@ class SpikeAnalysis_MultiRecording:
                 master_df = self.__make_zscore_df__(zscored_events, recording, recording_name, event_name, master_df =None, sig_dict = significance_dict)
                 is_first = False
             else:
-                master_df = self.__make_zscore_df__ (zscored_events, recording, recording_name, event_name, master_df, sig_dict = significance_dict)
+                master_df = self.__make_zscore_df__(zscored_events, recording, recording_name, event_name, master_df, sig_dict = significance_dict)
         if save:
             self.ephyscollection.zscored_events[event_name] = master_df
         if plot:
             self.__zscore_plot__(zscored_dict, event, equalize, pre_window)
         return master_df
-        
+
     def zscore_baseline_event(self, event, baseline, equalize, pre_window = 0, plot = True, save = False):
         """
         calculates z-scored event average firing rates for all recordings in the collection
@@ -1700,7 +1459,7 @@ class SpikeAnalysis_MultiRecording:
 
         Args (5 total, 3 required):
             event: str, event type whose average firing rates are being z-scored
-            baseline_window: str, baseline event to which other events will be normalized to
+            baseline_window: int, time (s) before onset of event
             equalize: float, length (s) of events used by padding with post event time
                     or trimming events all to equalize (s) long used in z scoring
             plot: Boolean, default=True, if true, function will plot, if false, function will not plot
@@ -1720,6 +1479,7 @@ class SpikeAnalysis_MultiRecording:
             unit_event_firing_rates = self.__get_unit_event_firing_rates__(recording, event, equalize, baseline_window, 0)  
             unit_baseline_firing_rates, event_name = self.__calc_preevent_baseline__(recording, baseline_window, offset, equalize, event)
             zscored_events = self.__zscore_event__(recording, unit_event_firing_rates, unit_baseline_firing_rates)
+            event_name = f'{baseline_window}s pre-{event} and {equalize}s {event}'
             if save:
                 recording.zscored_events[event_name] = zscored_events
             zscored_dict[recording_name] = zscored_events
@@ -1727,11 +1487,77 @@ class SpikeAnalysis_MultiRecording:
                 master_df = self.__make_zscore_df__(zscored_events, recording, recording_name, event_name, master_df =None)
                 is_first = False
             else:
-                master_df = self.__make_zscore_df__ (zscored_events, recording, recording_name, event_name, master_df)
+                master_df = self.__make_zscore_df__(zscored_events, recording, recording_name, event_name, master_df)
         if save:
             self.ephyscollection.zscored_events[event_name] = master_df
         if plot:
             self.__zscore_plot__(zscored_dict, event, equalize, baseline_window, offset)
+    
+    @staticmethod
+    def calculate_zscore(event_arr, baseline_arr):
+        if baseline_arr.size == 0 or event_arr.size == 0:
+            return np.nan  # Return NaN if arrays are empty
+
+        baseline_mean = np.mean(baseline_arr)
+        baseline_std = np.std(baseline_arr, ddof=1)  # Using ddof=1 for sample standard deviation
+
+        # Check for division by zero or NaN values in baseline mean or std
+        if baseline_mean == 0 or np.isnan(baseline_mean) or np.isnan(baseline_std):
+            return np.nan
+        elif baseline_std == 0:
+            # If std is exactly zero, return NaN or consider alternative handling
+            return np.nan
+        elif (baseline_std / baseline_mean) < 0.01:
+            # Consider std as effectively zero if it's less than 1% of the mean
+            return np.nan
+
+        event_mean = np.mean(event_arr)
+        zscore = (event_mean - baseline_mean) / baseline_std
+        return zscore
+
+    def zscore_pre_event2(self, event, equalize, baseline_window, offset=0, plot=True, save=False):
+        """
+        Calculates and optionally plots and saves the average z-scores for each unit for a specified event,
+        based on each event's immediate pre-event firing rates. Now also returns a summary of these z-scores.
+        """
+        # Initialize a dictionary to hold the aggregated z-scores for each recording
+        recordings_zscores = {}
+
+        # Iterate through each recording in the collection
+        for recording_name, recording in self.ephyscollection.collection.items():
+            event_fr = self.__get_unit_event_firing_rates__(recording, event, equalize, pre_window=0, post_window=0)
+            pre_event_fr, _ = self.__calc_preevent_baseline__(recording, baseline_window, offset, equalize, event)
+
+            # Prepare a temporary structure to hold the calculated z-scores for the current recording
+            temp_zscores = {}
+
+            # Calculate z-scores for each unit within the current recording
+            for unit in event_fr.keys():
+                if unit in pre_event_fr:
+                    # Calculate z-scores for each event occurrence
+                    zscores = [self.calculate_zscore(event_fr[unit][i], pre_event_fr[unit][i]) for i in range(len(event_fr[unit]))]
+                    
+                    # Filter out NaN values before calculating the mean
+                    valid_zscores = [z for z in zscores if not np.isnan(z)]
+                    mean_zscore = np.nanmean(valid_zscores) if valid_zscores else np.nan
+                    
+                    # Temporarily store the mean z-score for the unit
+                    temp_zscores[unit] = mean_zscore
+            
+            # Optionally update the recording's zscored_events based on the 'save' flag
+            if save:
+                recording.zscored_events[event] = temp_zscores
+
+            # Add the current recording's z-scores to the overall aggregated dictionary
+            recordings_zscores[recording_name] = temp_zscores
+
+        # Optionally plot the z-scores
+        if plot:
+            # Ensure the plotting function is capable of handling the structure of recordings_zscores
+            self.__plot_zscores__(recordings_zscores, event)
+        
+        # Return the aggregated z-scores across recordings
+        return recordings_zscores
 
     def generate_event_dataframe(self, baseline=10, equalize=10):
         """
@@ -1740,15 +1566,18 @@ class SpikeAnalysis_MultiRecording:
         """
         # List to store row data for DataFrame
         data_rows = []
+
         # Temporary variables to track the maximum length of pre-event and event timebins
         max_pre_event_len = 0
         max_event_len = 0
+
         # Iterate through each recording
         for recording_name, recording in self.ephyscollection.collection.items():
             # Iterate through each event type in the recording
             for event_name in recording.event_dict.keys():
                 event_fr = self.__get_unit_event_firing_rates__(recording, event_name, equalize, pre_window=0, post_window=0)
                 pre_event_fr, _ = self.__calc_preevent_baseline__(recording, baseline, offset=0, equalize=0, event=event_name)
+
                 # Ensure both event_fr and pre_event_fr are not None and have the same units
                 if event_fr and pre_event_fr:
                     for unit in event_fr.keys():
@@ -1760,19 +1589,24 @@ class SpikeAnalysis_MultiRecording:
                                 event_data = list(pre_event_arr) + list(event_arr)
                                 row = [recording_name, event_name, i+1, unit] + event_data
                                 data_rows.append(row)
+
                                 # Update maximum lengths
                                 max_pre_event_len = max(max_pre_event_len, len(pre_event_arr))
                                 max_event_len = max(max_event_len, len(event_arr))
+
         # Define column names with explicit differentiation
         pre_event_columns = [f'Pre-event timebin {i+1}' for i in range(max_pre_event_len)]
         event_columns = [f'Event timebin {i+1}' for i in range(max_event_len)]
         columns = ['Recording', 'Event name', 'Event number', 'Unit number'] + pre_event_columns + event_columns
+
         # Create DataFrame
         event_df = pd.DataFrame(data_rows, columns=columns)
+
         # Adjust for rows with less than max timebins by filling NaNs for missing timebins
         event_df = event_df.fillna(np.nan)
+
         return event_df
-    
+
     def __zscore_plot__(self, zscored_dict, event, equalize, baseline_window, offset=0):
         """
         plots z-scored average event firing rate for the population of good units with SEM 
@@ -1784,7 +1618,7 @@ class SpikeAnalysis_MultiRecording:
             equalize: int, length (s) of event plotted
             baseline_window: int, length (s) of time prior to event onset plotted
             title: str, title of plot
-        
+
         Return:
             none    
         """
@@ -1797,28 +1631,35 @@ class SpikeAnalysis_MultiRecording:
             zscore_pop = np.array(list(zscored_unit_event_firing_rates.values()))
             mean_arr = np.mean(zscore_pop, axis=0)
             sem_arr = sem(zscore_pop, axis=0)
-            x = np.linspace(start=-baseline_window,stop=equalize,num=len(mean_arr))
-            plt.subplot(height_fig,2,i)
-            plt.plot(x, mean_arr, c= 'b')
-            plt.axvline(x=0, color='r', linestyle='--')
-            if offset != 0:
-                plt.axvline(x=offset, color='b', linestyle='--')
-            plt.fill_between(x, mean_arr-sem_arr, mean_arr+sem_arr, alpha=0.2)
-            plt.title(f'{recording_name} Population z-score')
-            plt.subplot(height_fig,2,i+1)
-            for unit in zscored_unit_event_firing_rates.keys():
-                plt.plot(x, zscored_unit_event_firing_rates[unit], linewidth = .5)
+
+            # Conditional check for mean_arr before plotting
+            if isinstance(mean_arr, np.ndarray) and mean_arr.ndim > 0 and len(mean_arr) > 0:  # Adjusted to > 0 to include arrays of length 1
+                x = np.linspace(start=-baseline_window, stop=equalize, num=len(mean_arr))
+                plt.subplot(height_fig, 2, i)
+                plt.plot(x, mean_arr, c='b')
                 plt.axvline(x=0, color='r', linestyle='--')
-                plt.title(f'{recording_name} Unit z-score')
                 if offset != 0:
                     plt.axvline(x=offset, color='b', linestyle='--')
+                plt.fill_between(x, mean_arr-sem_arr, mean_arr+sem_arr, alpha=0.2)
+                plt.title(f'{recording_name} Population z-score')
+            else:
+                print(f"Skipping population plot for {recording_name} due to insufficient data.")
+
+            plt.subplot(height_fig, 2, i+1)
+            for unit in zscored_unit_event_firing_rates.keys():
+                unit_firing_rate = zscored_unit_event_firing_rates[unit]
+                # Perform similar checks for individual units if necessary
+                if isinstance(unit_firing_rate, np.ndarray) and unit_firing_rate.ndim > 0 and len(unit_firing_rate) > 0:
+                    plt.plot(x, unit_firing_rate, linewidth = .5)
+                    plt.axvline(x=0, color='r', linestyle='--')
+                    if offset != 0:
+                        plt.axvline(x=offset, color='b', linestyle='--')
+            plt.title(f'{recording_name} Unit z-score')
             i +=2
         plt.suptitle(f'{equalize}s {event} vs {baseline_window}s baseline: Z-scored average')
-        plt.show() 
+        plt.show()
 
-    def PCA_matrix_generation(
-        self, equalize, pre_window, post_window=0, events=None, recordings=None
-    ):
+    def PCA_matrix_generation(self, equalize, pre_window, post_window=0, events=None, recordings=None):
         """
         WRItE DOC STRING
 
@@ -1888,19 +1729,7 @@ class SpikeAnalysis_MultiRecording:
         explained_variance_ratios = pca.explained_variance_ratio_
         return matrix_df, transformed_matrix, key, coefficients, explained_variance_ratios
 
-    def PCA_trajectories(
-        self,
-        equalize,
-        pre_window,
-        post_window=0,
-        plot=True,
-        save=False,
-        events=None,
-        recordings=None,
-        d=2,
-        azim=30,
-        elev=20,
-    ):
+    def PCA_trajectories(self, equalize, pre_window, post_window=0, plot=True, save=False, events=None, recordings=None, d=2, azim=30, elev=20):
         """
         calculates a PCA matrix where each data point represents a timebin.
         PCA space is calculated from a matrix of all units and all timebins
@@ -1939,26 +1768,12 @@ class SpikeAnalysis_MultiRecording:
                     self.ephyscollection.PCA_dfs[PCA_dict_key] = transformed_matrix
         if plot:
             if d == 2:
-                self.__PCA_EDA_plot__(
-                    transformed_matrix,
-                    PCA_event_key,
-                    equalize,
-                    pre_window,
-                    post_window,
-                )
+                self.__PCA_EDA_plot__(transformed_matrix, PCA_event_key, equalize, pre_window, post_window)
             if d == 3:
-                self.__PCA_EDA_plot_3D__(
-                    transformed_matrix,
-                    PCA_event_key,
-                    equalize,
-                    pre_window,
-                    post_window, azim, elev
-                )
+                self.__PCA_EDA_plot_3D__(transformed_matrix, PCA_event_key, equalize, pre_window, post_window, azim, elev)
         return transformed_matrix, coefficients, explained_variance_ratios
 
-    def __PCA_EDA_plot__(
-        self, PCA_matrix, PCA_key, equalize, pre_window, post_window
-    ):
+    def __PCA_EDA_plot__(self, PCA_matrix, PCA_key, equalize, pre_window, post_window):
         """
         Plots PCA trajectories calculated in PCA_trajectories using the same
         pre window, post window, and equalize parameters. Each event type is
@@ -1972,9 +1787,7 @@ class SpikeAnalysis_MultiRecording:
         Returns:
             none
         """
-        event_lengths = int(
-            (equalize + pre_window + post_window) * 1000 / self.timebin
-        )
+        event_lengths = int((equalize + pre_window + post_window) * 1000 / self.timebin)
         event_end = int((equalize + pre_window) * 1000 / self.timebin)
         pre_window = pre_window * 1000 / self.timebin
         post_window = post_window * 1000 / self.timebin
@@ -1986,68 +1799,21 @@ class SpikeAnalysis_MultiRecording:
             onset = int(i + pre_window - 1)
             end = int(i + event_end - 1)
             post = int(i + event_lengths - 1)
-            plt.scatter(
-                PCA_matrix[i : i + event_lengths, 0],
-                PCA_matrix[i : i + event_lengths, 1],
-                label=event_label,
-                s=5,
-                c=colors[col_counter],
-            )
-            plt.scatter(
-                PCA_matrix[i, 0],
-                PCA_matrix[i, 1],
-                marker="s",
-                s=100,
-                c="w",
-                edgecolors=colors[col_counter],
-            )
-            plt.scatter(
-                PCA_matrix[onset, 0],
-                PCA_matrix[onset, 1],
-                marker="^",
-                s=150,
-                c="w",
-                edgecolors=colors[col_counter],
-            )
-            plt.scatter(
-                PCA_matrix[end, 0],
-                PCA_matrix[end, 1],
-                marker="o",
-                s=100,
-                c="w",
-                edgecolors=colors[col_counter],
-            )
+            plt.scatter(PCA_matrix[i : i + event_lengths, 0], PCA_matrix[i : i + event_lengths, 1], label=event_label, s=5, c=colors[col_counter])
+            plt.scatter(PCA_matrix[i, 0], PCA_matrix[i, 1], marker="s", s=100, c="w", edgecolors=colors[col_counter])
+            plt.scatter(PCA_matrix[onset, 0], PCA_matrix[onset, 1], marker="^", s=150, c="w", edgecolors=colors[col_counter])
+            plt.scatter(PCA_matrix[end, 0], PCA_matrix[end, 1], marker="o", s=100, c="w", edgecolors=colors[col_counter])
             if post_window != 0:
-                plt.scatter(
-                    PCA_matrix[post, 0],
-                    PCA_matrix[post, 1],
-                    marker="D",
-                    s=100,
-                    c="w",
-                    edgecolors=colors[col_counter],
-                )
+                plt.scatter(PCA_matrix[post, 0], PCA_matrix[post, 1], marker="D", s=100, c="w", edgecolors=colors[col_counter])
             col_counter += 1
         plt.legend(loc="upper left", bbox_to_anchor=(1, 1))
         if post_window != 0:
-            plt.title(
-                "Preevent = square, Onset = triangle, End of event = circle, Post event = Diamond"
-            )
+            plt.title("Preevent = square, Onset = triangle, End of event = circle, Post event = Diamond")
         else:
-            plt.title(
-                "Preevent = square, Onset = triangle, End of event = circle"
-            )
+            plt.title("Preevent = square, Onset = triangle, End of event = circle")
         plt.show()
 
-    def __PCA_EDA_plot_3D__(
-        self,
-        PCA_matrix,
-        PCA_key,
-        equalize,
-        pre_window,
-        post_window,
-        azim=30,
-        elev=50,
-    ):
+    def __PCA_EDA_plot_3D__(self, PCA_matrix, PCA_key, equalize, pre_window, post_window, azim=30, elev=50):
         """
         Plots PCA trajectories calculated in PCA_trajectories using the same
         pre window, post window, and equalize parameters. Each event type is
@@ -2061,9 +1827,7 @@ class SpikeAnalysis_MultiRecording:
         Returns:
             none
         """
-        event_lengths = int(
-            (equalize + pre_window + post_window) * 1000 / self.timebin
-        )
+        event_lengths = int((equalize + pre_window + post_window) * 1000 / self.timebin)
         event_end = int((equalize + pre_window) * 1000 / self.timebin)
         pre_window = pre_window * 1000 / self.timebin
         post_window = post_window * 1000 / self.timebin
@@ -2077,51 +1841,12 @@ class SpikeAnalysis_MultiRecording:
             onset = int(i + pre_window - 1)
             end = int(i + event_end - 1)
             post = int(i + event_lengths - 1)
-            ax.scatter(
-                PCA_matrix[i : i + event_lengths, 0],
-                PCA_matrix[i : i + event_lengths, 1],
-                PCA_matrix[i : i + event_lengths, 2],
-                label=event_label,
-                s=5,
-                c=colors[col_counter],
-            )
-            ax.scatter(
-                PCA_matrix[i, 0],
-                PCA_matrix[i, 1],
-                PCA_matrix[i, 2],
-                marker="s",
-                s=100,
-                c="w",
-                edgecolors=colors[col_counter],
-            )
-            ax.scatter(
-                PCA_matrix[onset, 0],
-                PCA_matrix[onset, 1],
-                PCA_matrix[onset, 2],
-                marker="^",
-                s=150,
-                c="w",
-                edgecolors=colors[col_counter],
-            )
-            ax.scatter(
-                PCA_matrix[end, 0],
-                PCA_matrix[end, 1],
-                PCA_matrix[end, 2],
-                marker="o",
-                s=100,
-                c="w",
-                edgecolors=colors[col_counter],
-            )
+            ax.scatter(PCA_matrix[i : i + event_lengths, 0], PCA_matrix[i : i + event_lengths, 1], PCA_matrix[i : i + event_lengths, 2], label=event_label, s=5, c=colors[col_counter])
+            ax.scatter(PCA_matrix[i, 0], PCA_matrix[i, 1], PCA_matrix[i, 2], marker="s", s=100, c="w", edgecolors=colors[col_counter])
+            ax.scatter(PCA_matrix[onset, 0], PCA_matrix[onset, 1], PCA_matrix[onset, 2], marker="^", s=150, c="w", edgecolors=colors[col_counter])
+            ax.scatter(PCA_matrix[end, 0], PCA_matrix[end, 1], PCA_matrix[end, 2], marker="o", s=100, c="w", edgecolors=colors[col_counter])
             if post_window != 0:
-                ax.scatter(
-                    PCA_matrix[post, 0],
-                    PCA_matrix[post, 1],
-                    PCA_matrix[post, 2],
-                    marker="D",
-                    s=100,
-                    c="w",
-                    edgecolors=colors[col_counter],
-                )
+                ax.scatter(PCA_matrix[post, 0], PCA_matrix[post, 1], PCA_matrix[post, 2], marker="D", s=100, c="w", edgecolors=colors[col_counter])
             col_counter += 1
         ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
         ax.set_xlabel("PC1")
@@ -2129,13 +1854,9 @@ class SpikeAnalysis_MultiRecording:
         ax.set_zlabel("PC3")
         ax.view_init(azim = azim, elev = elev)
         if post_window != 0:
-            ax.set_title(
-                "Preevent = square, Onset = triangle, End of event = circle, Post event = Diamond"
-            )
+            ax.set_title("Preevent = square, Onset = triangle, End of event = circle, Post event = Diamond")
         else:
-            ax.set_title(
-                "Preevent = square, Onset = triangle, End of event = circle"
-            )
+            ax.set_title("Preevent = square, Onset = triangle, End of event = circle")
         plt.show()
 
     def LOO_PCA(self, equalize, pre_window, percent_var, post_window = 0, events = None):
@@ -2156,12 +1877,8 @@ class SpikeAnalysis_MultiRecording:
         event_trajectories = event_slice(transformed_subsets, key, no_PCs, mode = 'multisession')
         pairwise_distances = geodesic_distances(event_trajectories, mode = 'multisession')
         return pairwise_distances
-    
-    def avg_geo_dist(self, equalize,
-                     pre_window,
-                     percent_var,
-                     post_window=0,
-                     events=None):
+
+    def avg_geo_dist(self, equalize, pre_window, percent_var, post_window=0, events=None):
         temp_pairwise_distances = {}
         is_first = True
         for record_name, recording in self.ephyscollection.collection.items():
@@ -2183,7 +1900,7 @@ class SpikeAnalysis_MultiRecording:
                     temp_distances.append(temp_pairwise_distances[pair][0])
                     pairwise_distances[pair] = temp_distances                
         return pairwise_distances
-    
+
     def __PCA_for_decoding__(self, equalize, pre_window, post_window, no_PCs, events):
         full_PCA_matrix, t_df, key, coefficients, explained_variance_ratios = self.PCA_matrix_generation(equalize, pre_window, post_window, events = events)
         recordings = full_PCA_matrix.columns.to_list()
@@ -2250,9 +1967,13 @@ class SpikeAnalysis_MultiRecording:
                 auc_rf = []
                 auc_glm_shuffle = []
                 auc_rf_shuffle = []
+                auc_svm = []
+                auc_svm_shuffle = []
                 prob_glm = []
                 prob_rf = []
+                prob_svm = []
                 prob_glm_shuffle = []
+                prob_svm_shuffle = []
                 prob_rf_shuffle = []
                 pos_fold = num_pos // num_fold
                 neg_fold = num_neg // num_fold
@@ -2280,15 +2001,25 @@ class SpikeAnalysis_MultiRecording:
                     pred_rf = model_rf.predict_proba(data_test[timebin, :, :].T)
                     prob_rf.append(pred_rf)
                     auc_rf.append(roc_auc_score(label_test, pred_rf[:, 1]))
+
+                    model_svm = LinearSVC(class_weight='balanced')
+                    model_svm.fit(data_train[timebin, :, :].T, label_train)
+                    pred_svm = model_svm.predict_proba(data_test[timebin, :, :].T)
+                    prob_svm.append(pred_svm)
+                    auc_svm.append(roc_auc_score(label_test, pred_svm[:, 1]))
                 auc[event]['glm'].append(auc_glm)
                 auc[event]['rf'].append(auc_rf)
+                auc[event]['svm'].append(auc_svm)
                 prob[event]['glm'].append(prob_glm)
                 prob[event]['rf'].append(prob_rf)
+                prob[event]['svm'].append(prob_svm)
                 for shuffle in range(num_shuffle):
                     temp_glm_shuffle = []
                     temp_rf_shuffle = []
+                    temp_svm_shuffle = []
                     temp_prob_glm_shuffle = []
                     temp_prob_rf_shuffle = [] 
+                    temp_prob_svm_shuffle = []
                     label_train = np.random.permutation(label_train)
                     for timebin in range(T):
                         model_glm = LogisticRegression(class_weight='balanced')
@@ -2302,19 +2033,28 @@ class SpikeAnalysis_MultiRecording:
                         pred_rf = model_rf.predict_proba(data_test[timebin, :, :].T)
                         temp_prob_rf_shuffle.append(pred_rf)
                         temp_rf_shuffle.append(roc_auc_score(label_test, pred_rf[:, 1]))
+
+                        model_svm = LinearSVC(class_weight='balanced')
+                        model_svm.fit(data_train[timebin, :, :].T, label_train)
+                        pred_svm = model_svm.predict_proba(data_test[timebin, :, :].T)
+                        temp_prob_svm_shuffle.append(pred_svm)
+                        temp_svm_shuffle.append(roc_auc_score(label_test, pred_svm[:, 1]))
                     auc_glm_shuffle.append(temp_glm_shuffle)
                     auc_rf_shuffle.append(temp_rf_shuffle)
+                    auc_svm_shuffle.append(temp_svm_shuffle)
                     prob_glm_shuffle.append(temp_prob_glm_shuffle)
                     prob_rf_shuffle.append(temp_prob_rf_shuffle)
+                    prob_svm_shuffle.append(temp_prob_svm_shuffle)
                 auc[event]['glm_shuffle'].append(auc_glm_shuffle)
                 auc[event]['rf_shuffle'].append(auc_rf_shuffle)
+                auc[event]['svm_shuffle'].append(auc_svm_shuffle)
                 prob[event]['glm_shuffle'].append(prob_glm_shuffle)
                 prob[event]['rf_shuffle'].append(prob_rf_shuffle)
+                prob[event]['svm_shuffle'].append(prob_svm_shuffle)
         if plot:
             self.__plot_auc__(auc, equalize, pre_window)
-        return [auc, prob]
-    
-                
+        return auc, prob
+
     def __plot_auc__(self, auc_dict, equalize, pre_window):
         avg_auc = {}
         no_plots = len(auc_dict.keys())
@@ -2350,7 +2090,6 @@ class SpikeAnalysis_MultiRecording:
         plt.suptitle('Decoder Accuracy')
         plt.show()
 
-
     def export(self, directory=None):
         """
         Exports all saved analyses tests to excel sheets either in the parent directroy
@@ -2379,17 +2118,10 @@ class SpikeAnalysis_MultiRecording:
         else:
             path = directory
         if self.ephyscollection.PCA_dfs:
-            filename = (
-                f"{self.smoothing_window}sw_{self.timebin}msbin_PCA.xlsx"
-            )
+            filename = (f"{self.smoothing_window}sw_{self.timebin}msbin_PCA.xlsx")
             full_path = os.path.join(path, filename)
             if os.path.exists(full_path):
-                with pd.ExcelWriter(
-                    full_path,
-                    mode="a",
-                    engine="openpyxl",
-                    if_sheet_exists="replace",
-                ) as writer:
+                with pd.ExcelWriter(full_path, mode="a", engine="openpyxl", if_sheet_exists="replace") as writer:
                     for name, df in self.ephyscollection.PCA_dfs.items():
                         df.to_excel(writer, sheet_name=name, index=True)
             else:
@@ -2399,115 +2131,76 @@ class SpikeAnalysis_MultiRecording:
         else:
             print("No PCA matrices have been saved")
         if self.ephyscollection.zscored_events:
-            filename = (
-                f"{self.smoothing_window}sw_{self.timebin}msbin_zscores.xlsx"
-            )
+            filename = (f"{self.smoothing_window}sw_{self.timebin}msbin_zscores.xlsx")
             full_path = os.path.join(path, filename)
             if os.path.exists(full_path):
-                with pd.ExcelWriter(
-                    full_path,
-                    mode="a",
-                    engine="openpyxl",
-                    if_sheet_exists="replace",
-                ) as writer:
-                    for (
-                        name,
-                        df,
-                    ) in self.ephyscollection.zscored_events.items():
+                with pd.ExcelWriter(full_path, mode="a", engine="openpyxl", if_sheet_exists="replace") as writer:
+                    for (name, df) in self.ephyscollection.zscored_events.items():
                         df.to_excel(writer, sheet_name=name, index=True)
             else:
                 with pd.ExcelWriter(full_path) as writer:
-                    for (
-                        name,
-                        df,
-                    ) in self.ephyscollection.zscored_events.items():
+                    for (name, df) in self.ephyscollection.zscored_events.items():
                         df.to_excel(writer, sheet_name=name, index=True)
         else:
             print("No z-scored events saved.")
         if self.ephyscollection.wilcox_dfs:
-            filename = (
-                f"{self.smoothing_window}sw_{self.timebin}msbin_wilcoxon.xlsx"
-            )
+            filename = (f"{self.smoothing_window}sw_{self.timebin}msbin_wilcoxon.xlsx")
             full_path = os.path.join(path, filename)
             if os.path.exists(full_path):
                 current_wilcox = pd.read_excel(full_path, index_col=[0])
                 for name, df in self.ephyscollection.wilcox_dfs.items():
-                    in_wilcox = (
-                        current_wilcox[current_wilcox == name].any().any()
-                    )
+                    in_wilcox = (current_wilcox[current_wilcox == name].any().any())
                     if not in_wilcox:
-                        temp_df = df[
-                            [
+                        temp_df = df[[
                                 "Subject",
                                 "Recording",
                                 "original unit id",
                                 "Event",
                                 "Wilcoxon Stat",
                                 "p value",
-                                "event1 vs event2",
-                            ]
-                        ]
+                                "event1 vs event2"]]
                         temp_df["Subject"] = temp_df["Subject"].astype(float)
-                        new_wilcox = current_wilcox.merge(
-                            temp_df,
-                            on=["Subject", "Recording", "original unit id"],
-                            how="left",
-                        )
+                        new_wilcox = current_wilcox.merge(temp_df, on=["Subject", "Recording", "original unit id"], how="left")
                         new_wilcox.to_excel(full_path, index=True)
             else:
                 is_first = True
                 for name, df in self.ephyscollection.wilcox_dfs.items():
                     if is_first:
-                        master_df = df[
-                            [
+                        master_df = df[[
                                 "Subject",
                                 "Recording",
                                 "original unit id",
                                 "Event",
                                 "Wilcoxon Stat",
                                 "p value",
-                                "event1 vs event2",
-                            ]
-                        ]
+                                "event1 vs event2"]]
                         is_first = False
                     else:
-                        temp_df = df[
-                            [
+                        temp_df = df[[
                                 "Subject",
                                 "Recording",
                                 "original unit id",
                                 "Event",
                                 "Wilcoxon Stat",
                                 "p value",
-                                "event1 vs event2",
-                            ]
-                        ]
-                        master_df = master_df.merge(
-                            temp_df,
-                            on=["Subject", "Recording", "original unit id"],
-                            how="left",
-                        )
+                                "event1 vs event2"]]
+                        master_df = master_df.merge(temp_df, on=["Subject", "Recording", "original unit id"], how="left")
                     master_df.to_excel(full_path, index=True)
         if self.ephyscollection.fishers_exact:
             filename = f"{self.smoothing_window}sw_{self.timebin}msbin_fishers_exact.xlsx"
             full_path = os.path.join(path, filename)
-            fishers_df = pd.DataFrame.from_dict(
-                self.ephyscollection.fishers_exact, orient="index"
-            )
+            fishers_df = pd.DataFrame.from_dict(self.ephyscollection.fishers_exact, orient="index")
             fishers_df.columns = [
                 "Odds ratio",
                 "P value",
                 "Significant units for event 1",
                 "Non-significant units for event 1",
                 "Significant units for event 2",
-                "Non-significant units for event 2",
-            ]
+                "Non-significant units for event 2"]
             if os.path.exists(full_path):
                 current_fishers = pd.read_excel(full_path, index_col=[0])
                 temp_fishers = pd.concat([current_fishers, fishers_df], axis=0)
-                total_fishers = temp_fishers[
-                    ~temp_fishers.index.duplicated(keep="first")
-                ]
+                total_fishers = temp_fishers[~temp_fishers.index.duplicated(keep="first")]
                 total_fishers.to_excel(full_path, index=True)
             else:
                 fishers_df.to_excel(full_path, index=True)

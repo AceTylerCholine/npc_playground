@@ -24,7 +24,6 @@ def hex_2_rgb(hex_color):
     rgb_color = tuple(int(hex_color[i:i+2], 16) / 255.0 for i in (1, 3, 5))
     return rgb_color
 
-
 def get_spiketrain(
     timestamp_array, last_timestamp, timebin=1, sampling_rate=20000
 ):
@@ -48,7 +47,6 @@ def get_spiketrain(
     )[0]
     return spiketrain
 
-
 def get_firing_rate(spiketrain, smoothing_window, timebin):
     """
     calculates firing rate (spikes/second)
@@ -68,7 +66,6 @@ def get_firing_rate(spiketrain, smoothing_window, timebin):
 
     return firing_rate
 
-
 def get_event_lengths(events):
     """
     calculates event lengths and longest event length
@@ -86,7 +83,6 @@ def get_event_lengths(events):
         event_lengths.append(event_length)
     return max(event_lengths), event_lengths, mean(event_lengths)
 
-
 def trim_event(event, max_event):
     """
     trims events to a given length
@@ -102,7 +98,6 @@ def trim_event(event, max_event):
         event[1] = event[0] + (max_event * 1000)
         event[0] = event[0]
     return np.array(event)
-
 
 def pre_event_window(event, baseline_window, offset):
     """
@@ -120,7 +115,6 @@ def pre_event_window(event, baseline_window, offset):
     preevent = [event[0] - (baseline_window * 1000) - 1,
                 event[0] + (offset*1000) - 1]
     return np.array(preevent)
-
 
 def max_events(unit_dict, max_event, pre_window, timebin=1):
     """
@@ -154,7 +148,6 @@ def max_events(unit_dict, max_event, pre_window, timebin=1):
         snippets_dict[unit] = events
     return snippets_dict
 
-
 def get_unit_average_events(unit_event_snippets):
     unit_average_event = {}
     try:
@@ -169,7 +162,6 @@ def get_unit_average_events(unit_event_snippets):
             )
     return unit_average_event
 
-
 def w_assessment(p_value, w):
     if p_value < 0.05:
         if w > 0:
@@ -178,7 +170,6 @@ def w_assessment(p_value, w):
             return "decreases"
     else:
         return "not significant"
-
 
 def get_indices(repeated_items_list):
     """
@@ -211,7 +202,6 @@ def get_indices(repeated_items_list):
                 current_item = repeated_items_list[i]
     return item_indices
 
-
 def PCs_needed(explained_variance_ratios, percent_explained=.9):
     """
     Calculates number of principle compoenents needed given a percent
@@ -230,7 +220,6 @@ def PCs_needed(explained_variance_ratios, percent_explained=.9):
     for i in range(len(explained_variance_ratios)):
         if explained_variance_ratios[0:i].sum() > percent_explained:
             return i
-
 
 def event_slice(transformed_subsets, key, no_PCs, mode):
     """
@@ -267,7 +256,6 @@ def event_slice(transformed_subsets, key, no_PCs, mode):
         trajectories[event] = event_trajectory
     return trajectories
 
-
 def geodesic_distances(event_trajectories, mode):
     pair_distances = {}
     for pair in list(combinations(event_trajectories.keys(), 2)):
@@ -275,7 +263,6 @@ def geodesic_distances(event_trajectories, mode):
         event2 = event_trajectories[pair[1]]
         pair_distances[pair] = distance_bw_trajectories(event1, event2, mode)
     return pair_distances
-
 
 def distance_bw_trajectories(trajectory1, trajectory2, mode):
     geodesic_distances = []
@@ -295,7 +282,6 @@ def distance_bw_trajectories(trajectory1, trajectory2, mode):
                 trajectory2[i, :])
         geodesic_distances.append(dist_bw_tb)
     return geodesic_distances
-
 
 def chunk_array(array, new_bin, old_bin):
     """
@@ -937,7 +923,7 @@ class SpikeAnalysis_MultiRecording:
         preevent_baselines = np.array([pre_event_window(event, baseline_window, offset) for event in recording.event_dict[event]])
         if len(recording.event_dict[event]) < 6:
             print(f"Wilcoxon can't be done on {recording_name} {event}, because <6 samples")
-            return pd.DataFrame({'Wilcoxon Stat': [np.nan], 'p value': [np.nan]})
+            return None
             
         unit_baseline_firing_rates = self.__get_unit_event_firing_rates__(recording, preevent_baselines, equalize = (baseline_window + offset), pre_window = 0, post_window= 0)
         if exclude_offset:
@@ -1019,6 +1005,7 @@ class SpikeAnalysis_MultiRecording:
                 Wilcoxon stats, p values, orginal unit ids, recording
         """
         is_first = True
+        master_df = None
         for (
             recording_name,
             recording,
@@ -1027,29 +1014,33 @@ class SpikeAnalysis_MultiRecording:
                 recording_name, recording, event, equalize, baseline_window, offset, 
                 exclude_offset, save
             )
-            recording_df = recording_df.reset_index().rename(
-                columns={"index": "original unit id"}
-            )
-            recording_df["Recording"] = recording_name
-            recording_df["Subject"] = recording.subject
-            recording_df[
-                "Event"
-            ] = f"{equalize}s {event} vs {baseline_window}s baseline"
-            if is_first:
-                master_df = recording_df
-                is_first = False
-            else:
-                master_df = pd.concat(
-                    [master_df, recording_df], axis=0
-                ).reset_index(drop=True)
-        wilcox_key = f"{equalize}s {event} vs {baseline_window}s baseline"
-        if save:
-            self.ephyscollection.wilcox_dfs[wilcox_key] = master_df
-        if plot:
-            self.__wilcox_baseline_v_event_plots__(
-                master_df, event, equalize, baseline_window, offset
-            )
-        return master_df
+            if recording_df is not None:  # Only process if sample size >5
+                recording_df = recording_df.reset_index().rename(
+                    columns={"index": "original unit id"}
+                )
+                recording_df["Recording"] = recording_name
+                recording_df["Subject"] = recording.subject
+                recording_df[
+                    "Event"
+                ] = f"{equalize}s {event} vs {baseline_window}s baseline"
+                if is_first:
+                    master_df = recording_df
+                    is_first = False
+                else:
+                    master_df = pd.concat(
+                        [master_df, recording_df], axis=0
+                    ).reset_index(drop=True)
+        if master_df is not None:
+            wilcox_key = f"{equalize}s {event} vs {baseline_window}s baseline"
+            if save:
+                self.ephyscollection.wilcox_dfs[wilcox_key] = master_df
+            if plot:
+                self.__wilcox_baseline_v_event_plots__(
+                    master_df, event, equalize, baseline_window, offset
+                )
+            return master_df
+        else:
+            return None
 
     def fishers_exact_wilcox(self, event1, event2, equalize, event3=None, 
                              baseline_window=None, offset=0,
@@ -1781,6 +1772,44 @@ class SpikeAnalysis_MultiRecording:
         # Adjust for rows with less than max timebins by filling NaNs for missing timebins
         event_df = event_df.fillna(np.nan)
         return event_df
+
+    def generate_spiketrain_dataframe(self, baseline=10, equalize=10):
+        """
+        Generates a DataFrame with detailed spike train data for each recording and each event,
+        explicitly differentiating between pre-event and event timebins and including unit numbers.
+
+        Args:
+            baseline (int): Baseline window size in seconds before the event.
+            equalize (int): Length in seconds to which events should be equalized.
+
+        Returns:
+            pd.DataFrame: DataFrame containing detailed spike train data.
+        """
+        data_rows = []
+        max_pre_event_len = 0
+        max_event_len = 0
+        for recording_name, recording in self.ephyscollection.collection.items():
+            for event_name in recording.event_dict.keys():
+                pre_event_windows = [pre_event_window(event, baseline, 0) for event in recording.event_dict[event_name]]
+                for unit, spike_train in recording.unit_spiketrains.items():
+                    if recording.labels_dict.get(str(unit)) == "good":
+                        event_spiketrains = self.__get_event_snippets__(recording, event_name, spike_train, equalize, pre_window=0, post_window=0)
+                        pre_event_spiketrains = self.__get_event_snippets__(recording, pre_event_windows, spike_train, equalize=0, pre_window=baseline, post_window=0)
+                        if event_spiketrains and pre_event_spiketrains:
+                            for i, (event_arr, pre_event_arr) in enumerate(zip(event_spiketrains, pre_event_spiketrains)):
+                                # Ensure the lengths match
+                                if len(event_arr) == equalize * 1000 // self.timebin and len(pre_event_arr) == baseline * 1000 // self.timebin:
+                                    # Combine pre-event and event data
+                                    event_data = list(pre_event_arr) + list(event_arr)
+                                    row = [recording_name, event_name, i + 1, unit] + event_data
+                                    data_rows.append(row)
+                                    max_pre_event_len = max(max_pre_event_len, len(pre_event_arr))
+                                    max_event_len = max(max_event_len, len(event_arr))
+        pre_event_columns = [f'Pre-event spike {i + 1}' for i in range(max_pre_event_len)]
+        event_columns = [f'Event spike {i + 1}' for i in range(max_event_len)]
+        columns = ['Recording', 'Event name', 'Event number', 'Unit number'] + pre_event_columns + event_columns
+        spiketrain_df = pd.DataFrame(data_rows, columns=columns)
+        return spiketrain_df
     
     def __zscore_plot__(self, zscored_dict, event, equalize, baseline_window, offset=0):
         """

@@ -1,0 +1,28 @@
+20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged
+	lose
+		[51543,  61543],
+         	[376543, 386543]
+	win
+		[171543,  181543],
+		[286544,  296544],
+         	[431544,  441543],
+
+time_stamp_index: 1030879
+video_frame: 1029
+reward_frame: 1109
+
+time_stamp_index: 3430878
+video_frame: 3425
+reward_frame: 3505
+
+If reward frame starts 5 seconds after video frame:
+	1109-1029 = 80, 80/5 = 16 frames/second, 1000/16 = 62.5 ms per frame
+
+From Leo's dictionary, 1st trial starts at 51543 and 2nd trial starts at 171543:
+	171,543-51,543 = 120,000 ms
+	time_stamp_index 2-1 = 3,430,878-1,030,879 = 2,400,000
+	so time_stamp_index is 20/ms?
+
+1,030,879/20 = 51,544 which is 1 more than Leo's start time: 51,543
+3,430,878/20 = 171,544 again, 1 more than Leo's start time: 171,543
+My calculations were after rounding, so Leo just rounded down maybe? Which sort of makes sense

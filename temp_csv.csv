@@ -1,0 +1,694 @@
+,original unit id,Wilcoxon Stat,p value,event1 vs event2,Recording,Subject,Event,putative
+0,65,37.0,0.587890625,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+1,17,30.0,0.5185546875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+2,75,37.0,0.587890625,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+3,24,3.0,0.001220703125,increases,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+4,58,28.0,0.423828125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+5,10,20.0,0.4921875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+6,54,1.0,0.00048828125,increases,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+7,51,36.0,0.541748046875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+8,43,27.0,0.21630859375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+9,50,11.0,0.10546875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+10,33,44.0,0.946044921875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+11,69,35.0,0.497314453125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+12,13,18.0,0.057373046875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,interneuron
+13,66,18.0,0.057373046875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+14,60,22.0,0.10986328125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+15,19,36.0,0.541748046875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+16,67,23.0,0.4130859375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+17,5,11.0,0.02685546875,increases,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+18,55,24.0,0.146484375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+19,36,6.0,0.0068359375,increases,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+20,53,13.0,0.9375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s win vs 10s baseline,pyramidal
+21,51,10.5,0.6875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+22,15,1.0,0.03125,increases,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+23,58,9.0,0.46875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+24,12,0.0,0.015625,decreases,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+25,52,0.0,0.015625,decreases,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+26,61,0.0,0.03125,decreases,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+27,50,4.5,1.0,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+28,46,0.0,0.125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+29,2,36.0,0.541748046875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+30,210,23.5,0.46484375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+31,1,11.0,0.02685546875,increases,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+32,334,19.5,0.2783203125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+33,126,42.0,0.83935546875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,interneuron
+34,273,40.5,0.786865234375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+35,162,38.5,1.0,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+36,74,20.0,0.1513671875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+37,283,26.0,0.19091796875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+38,23,33.0,0.414306640625,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+39,14,24.0,0.146484375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+40,351,19.5,0.080322265625,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+41,240,44.0,0.946044921875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+42,400,32.0,0.6220703125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+43,337,30.0,0.8310546875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+44,36,37.0,0.587890625,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+45,403,9.0,0.25,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+46,70,15.0,0.232421875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+47,176,39.0,0.684814453125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+48,211,8.0,0.375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+49,54,71.0,0.3524589538574219,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,interneuron
+50,60,71.5,0.37359619140625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,interneuron
+51,481,6.0,5.340576171875e-05,increases,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+52,223,34.0,0.02367401123046875,increases,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+53,489,94.0,0.9843215942382812,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+54,479,32.0,0.0347900390625,increases,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+55,300,73.0,0.6094589233398438,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+56,21,64.5,0.24125289916992188,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+57,0,,,,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s win vs 10s baseline,n/a
+58,5,52.0,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,interneuron
+59,290,22.5,0.067626953125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+60,192,38.0,0.635498046875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+61,172,40.0,0.463134765625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+62,248,36.5,0.3575439453125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+63,12,37.0,0.90966796875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+64,295,46.0,0.71484375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,interneuron
+65,44,28.0,0.13525390625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+66,76,29.5,0.172607421875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+67,86,30.5,0.5693359375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+68,176,37.0,0.90966796875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+69,229,47.5,0.8077392578125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+70,75,17.0,0.0478515625,increases,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+71,0,16.0,0.020263671875,increases,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+72,245,9.5,0.0052490234375,increases,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+73,289,39.0,0.684814453125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+74,175,30.5,0.1937255859375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+75,154,40.0,0.463134765625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+76,220,33.0,0.2412109375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+77,6,37.0,0.3575439453125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+78,14,1.0,0.125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+79,126,5.0,0.625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+80,369,3.0,0.3125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+81,18,8.0,0.6875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+82,13,9.5,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+83,391,10.0,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+84,331,9.0,0.84375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+85,119,0.0,0.03125,decreases,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+86,12,8.0,0.6875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+87,373,3.0,0.15625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+88,376,3.0,0.15625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+89,34,0.0,0.03125,decreases,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+90,88,9.0,0.84375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+91,21,3.0,0.3125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+92,22,10.0,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+93,298,6.0,0.4375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,interneuron
+94,251,5.0,0.3125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+95,285,0.0,0.125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+96,383,5.0,0.625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+97,175,10.0,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+98,390,3.5,0.875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+99,106,23.0,0.127197265625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+100,133,29.5,0.305419921875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+101,120,42.0,0.83935546875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+102,122,31.0,0.339599609375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+103,186,33.0,0.67724609375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+104,128,22.5,0.127197265625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+105,9,36.5,0.587890625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+106,18,22.0,0.10986328125,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+107,180,32.0,0.375732421875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+108,43,27.0,0.21630859375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+109,193,32.0,0.9658203125,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+110,68,37.5,0.9697265625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+111,89,37.5,0.635498046875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+112,151,21.0,0.09423828125,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,interneuron
+113,67,24.0,0.46484375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+114,46,37.0,0.587890625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+115,13,38.5,0.684814453125,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+116,90,31.0,0.339599609375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+117,76,37.0,0.587890625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+118,53,0.0,0.03125,decreases,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+119,63,10.0,1.0,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+120,64,0.0,0.03125,decreases,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+121,61,2.0,0.375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+122,6,74.0,0.4180412292480469,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+123,60,36.0,0.015972137451171875,increases,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+124,4,64.0,0.3692169189453125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+125,59,53.0,0.09551239013671875,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+126,39,48.5,0.11870574951171875,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+127,28,71.0,0.550872802734375,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+128,29,74.0,0.4180412292480469,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+129,54,58.0,0.4037628173828125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+130,52,85.0,0.70855712890625,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+131,48,45.5,0.0897674560546875,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+132,74,60.5,0.30379486083984375,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+133,78,46.0,0.274444580078125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+134,5,90.0,0.8595733642578125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+135,53,38.5,0.42626953125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+136,17,39.0,0.14385986328125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+137,3,84.0,0.9661178588867188,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+138,80,25.0,0.02496337890625,increases,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+139,0,,,,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s win vs 10s baseline,n/a
+140,139,45.0,0.6697998046875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+141,7,32.5,0.2412109375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+142,76,43.5,0.625732421875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+143,84,49.0,0.855224609375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+144,159,32.0,0.216552734375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+145,98,1.0,0.0009765625,increases,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+146,141,44.5,0.6697998046875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+147,154,35.5,0.85009765625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+148,50,23.0,0.2333984375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+149,12,27.0,0.21630859375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+150,48,28.0,0.423828125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+151,11,27.0,0.21630859375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+152,175,22.0,0.0579833984375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+153,128,19.5,0.080322265625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+154,90,39.0,0.42626953125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+155,137,35.5,0.85009765625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+156,161,19.5,0.0418701171875,increases,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+157,65,6.0,0.4375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,interneuron
+158,123,6.0,0.4375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+159,103,3.0,0.15625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+160,83,0.0,0.03125,decreases,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+161,118,0.0,0.03125,decreases,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+162,93,0.0,0.03125,decreases,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+163,99,5.0,0.3125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+164,105,5.0,0.625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+165,87,5.0,0.3125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+166,19,0.0,0.0625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,interneuron
+167,9,1.0,0.0625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s win vs 10s baseline,pyramidal
+168,0,,,,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s win vs 10s baseline,n/a
+169,89,15.0,0.03271484375,increases,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,interneuron
+170,119,17.5,0.10986328125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+171,64,23.5,0.146484375,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+172,121,28.5,0.7646484375,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+173,98,34.0,0.454833984375,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+174,126,0.0,0.0009765625,decreases,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+175,100,21.0,0.09423828125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+176,2,23.5,0.26611328125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+177,0,,,,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s win vs 10s baseline,n/a
+178,0,,,,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s win vs 10s baseline,n/a
+179,0,,,,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s win vs 10s baseline,n/a
+180,21,79.5,0.5677604675292969,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+181,171,103.0,0.956329345703125,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+182,46,55.5,0.12318801879882812,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+183,194,39.0,0.012079238891601562,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+184,39,46.0,0.049365997314453125,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+185,166,78.0,0.7660293579101562,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+186,44,68.0,0.17685317993164062,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+187,22,41.0,0.0289306640625,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+188,48,58.0,0.082550048828125,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+189,58,62.5,0.1230926513671875,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+190,23,35.0,0.0072956085205078125,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+191,20,97.5,0.8123550415039062,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+192,147,55.5,0.5618896484375,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+193,59,58.5,0.668548583984375,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+194,211,37.0,0.009435653686523438,increases,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+195,227,89.0,0.5705966949462891,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+196,167,72.0,0.5798416137695312,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+197,146,56.0,0.069580078125,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+198,157,59.0,0.156402587890625,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+199,196,56.5,0.0758514404296875,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+200,186,58.5,0.08969497680664062,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+201,37,47.0,0.029575347900390625,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,interneuron
+202,182,78.5,0.7987060546875,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+203,226,11.5,0.0005340576171875,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+204,150,67.0,0.2753410339355469,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,interneuron
+205,40,101.0,0.8983173370361328,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+206,164,69.5,0.3320655822753906,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+207,172,43.5,0.040130615234375,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+208,39,36.5,0.009435653686523438,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+209,212,20.0,0.0007076263427734375,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+210,191,46.0,0.026641845703125,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+211,185,75.5,0.2942523956298828,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+212,210,59.0,0.08969497680664062,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+213,167,102.5,0.956329345703125,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+214,113,46.0,0.026641845703125,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+215,63,30.0,0.007144927978515625,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+216,0,77.5,0.7660293579101562,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+217,188,56.5,0.1336212158203125,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+218,42,38.0,0.129730224609375,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+219,197,96.0,0.7561664581298828,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+220,44,80.0,0.83172607421875,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+221,43,73.0,0.24548721313476562,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+222,193,63.0,0.21011734008789062,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+223,158,66.0,0.93988037109375,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s win vs 10s baseline,pyramidal
+224,0,,,,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s win vs 10s baseline,n/a
+225,27,21.0,0.013092041015625,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+226,164,18.5,0.240234375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+227,52,52.0,0.67877197265625,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+228,0,63.0,0.820892333984375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+229,148,64.0,0.860260009765625,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+230,67,67.0,0.979949951171875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+231,124,62.0,0.781951904296875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+232,7,30.0,0.0506591796875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+233,13,37.0,0.207763671875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,interneuron
+234,121,26.5,0.063720703125,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+235,11,56.5,0.890380859375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,interneuron
+236,68,42.0,0.33026123046875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+237,120,33.0,0.07391357421875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+238,105,57.5,0.632171630859375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+239,144,61.5,0.781951904296875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+240,155,44.5,0.252227783203125,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+241,64,51.5,0.433197021484375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s win vs 10s baseline,pyramidal
+242,0,,,,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s win vs 10s baseline,n/a
+243,18,25.0,0.30126953125,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,interneuron
+244,9,17.0,0.1748046875,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+245,20,19.0,0.12939453125,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+246,154,14.0,0.05224609375,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+247,123,20.0,0.1513671875,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+248,115,34.0,0.7333984375,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+249,117,26.5,0.38037109375,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+250,150,12.5,0.16015625,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+251,13,9.5,0.0419921875,increases,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+252,190,23.0,0.6953125,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s win vs 10s baseline,pyramidal
+253,124,12.0,0.4609375,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s win vs 10s baseline,pyramidal
+254,148,14.0,0.640625,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s win vs 10s baseline,pyramidal
+255,45,7.0,0.1484375,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s win vs 10s baseline,pyramidal
+256,146,14.0,0.640625,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s win vs 10s baseline,pyramidal
+257,109,10.5,0.6875,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s win vs 10s baseline,pyramidal
+258,60,7.0,0.1484375,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s win vs 10s baseline,pyramidal
+259,67,17.5,1.0,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s win vs 10s baseline,pyramidal
+260,0,,,,20240320_171038_alone_comp_subj_4-2_t6b6_merged.rec,4-2,10s win vs 10s baseline,n/a
+261,33,35.0,0.1688232421875,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+262,42,48.5,0.2068939208984375,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+263,150,27.0,0.00457763671875,increases,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,interneuron
+264,13,26.0,0.003917694091796875,increases,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,interneuron
+265,82,75.0,0.6705245971679688,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+266,32,36.0,0.056884765625,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+267,63,47.0,0.17425537109375,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+268,116,66.5,0.979949951171875,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,interneuron
+269,93,71.0,0.550872802734375,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+270,124,32.5,0.07391357421875,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+271,8,43.5,0.625732421875,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+272,66,85.5,1.0,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+273,110,40.5,0.0289306640625,increases,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+274,111,38.0,0.03849029541015625,increases,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+275,75,40.0,0.025821685791015625,increases,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+276,120,21.5,0.00202178955078125,increases,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+277,31,69.0,0.312408447265625,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+278,95,81.5,0.8985748291015625,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+279,59,54.5,0.11337661743164062,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+280,19,69.0,0.312408447265625,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,interneuron
+281,98,43.5,0.040130615234375,increases,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+282,94,55.5,0.2121429443359375,not significant,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+283,0,,,,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s win vs 10s baseline,n/a
+284,8,26.0,0.0019855499267578125,increases,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+285,32,33.0,0.005580902099609375,increases,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+286,44,35.0,0.1688232421875,not significant,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+287,14,69.5,0.20244979858398438,not significant,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+288,39,60.5,0.18186569213867188,not significant,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+289,73,55.0,0.06372261047363281,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,interneuron
+290,58,50.5,0.14151763916015625,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+291,158,73.5,0.6396942138671875,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+292,25,32.5,0.005580902099609375,increases,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+293,210,84.0,0.6794281005859375,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+294,36,63.5,0.22532272338867188,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+295,28,82.0,0.40909767150878906,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+296,27,51.5,0.08742904663085938,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+297,194,49.0,0.11870574951171875,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+298,24,97.5,0.8123550415039062,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+299,83,31.0,0.05767822265625,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+300,13,92.0,0.6476554870605469,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,interneuron
+301,216,95.0,0.7285060882568359,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+302,183,16.0,0.000644683837890625,increases,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+303,23,84.5,0.47490501403808594,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+304,59,85.0,1.0,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+305,77,88.5,0.8287849426269531,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+306,177,19.0,0.0023345947265625,increases,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+307,52,45.0,0.044559478759765625,increases,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+308,169,67.5,0.17685317993164062,not significant,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+309,101,48.0,0.03276824951171875,increases,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s win vs 10s baseline,pyramidal
+310,0,,,,20240323_122227_alone_comp_subj_5-2_t6b6_merged.rec,5-2,10s win vs 10s baseline,n/a
+311,0,,,,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s win vs 10s baseline,n/a
+312,1,61.5,0.51708984375,not significant,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+313,3,2.0,4.57763671875e-05,increases,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+314,4,16.0,0.0025787353515625,increases,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+315,7,38.0,0.22930908203125,not significant,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+316,32,31.0,0.030517578125,increases,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3-4,10s win vs 10s baseline,pyramidal
+317,27,46.0,0.45428466796875,not significant,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3-4,10s win vs 10s baseline,interneuron
+318,42,12.0,0.8125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,interneuron
+319,27,8.0,0.375,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+320,54,9.0,0.46875,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+321,18,11.0,0.6875,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+322,0,10.0,0.578125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+323,49,6.0,0.21875,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+324,81,6.0,0.21875,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+325,75,10.0,1.0,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+326,68,14.0,1.0,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+327,4,3.0,0.078125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,pyramidal
+328,24,6.0,0.21875,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s win vs 10s baseline,interneuron
+329,65,9.5,0.578125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+330,17,4.0,0.4375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+331,75,9.0,0.46875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+332,24,10.0,0.578125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+333,58,14.0,1.0,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+334,10,10.0,1.0,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+335,54,8.0,0.375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+336,51,10.0,0.578125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+337,43,10.5,0.6875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+338,50,7.0,0.296875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+339,33,5.0,0.15625,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+340,69,12.0,0.8125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+341,13,13.0,0.9375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,interneuron
+342,66,6.0,0.21875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+343,60,11.0,0.6875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+344,19,9.0,0.46875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+345,67,4.0,0.21875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+346,5,8.5,0.84375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+347,55,13.0,0.9375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+348,36,10.0,1.0,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+349,53,7.5,1.0,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,1-3,10s lose vs 10s baseline,pyramidal
+350,51,34.5,0.497314453125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+351,15,19.0,0.068115234375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+352,58,15.0,0.03271484375,increases,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+353,12,28.0,0.243896484375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+354,52,23.0,0.2333984375,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+355,61,26.0,0.19091796875,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+356,50,10.0,0.578125,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+357,46,39.5,0.7353515625,not significant,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+358,2,11.0,0.6875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+359,210,7.0,0.5625,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+360,1,11.0,0.6875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+361,334,0.0,0.0625,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+362,126,10.0,0.578125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,interneuron
+363,273,2.0,0.09375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+364,162,10.0,0.578125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+365,74,13.0,0.9375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+366,283,4.0,0.109375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+367,23,0.0,0.03125,decreases,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+368,14,3.0,0.078125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+369,351,11.0,0.6875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+370,240,9.0,0.46875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+371,400,10.0,0.578125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+372,337,9.0,0.46875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+373,36,10.0,0.578125,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+374,403,9.0,0.84375,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+375,70,4.0,0.21875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+376,176,8.5,0.46875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+377,211,7.0,0.296875,not significant,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+378,0,,,,20230613_105657_standard_comp_to_training_D2_subj_1-1_t1b2L_box1_merged.rec,1-1,10s lose vs 10s baseline,n/a
+379,10,68.5,0.312408447265625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+380,203,40.0,0.025821685791015625,increases,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+381,28,37.5,0.0714111328125,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+382,197,59.0,0.156402587890625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+383,12,90.0,0.8595733642578125,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+384,52,55.5,0.12318801879882812,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+385,30,84.5,0.70855712890625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+386,7,66.0,0.25792694091796875,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+387,32,66.0,0.25792694091796875,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+388,23,41.0,0.17535400390625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+389,54,55.0,0.11337661743164062,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+390,174,56.0,0.12318801879882812,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+391,53,88.0,0.7982521057128906,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+392,44,20.0,0.02154541015625,increases,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+393,144,91.0,0.8905677795410156,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+394,33,73.5,0.4180412292480469,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+395,34,44.0,0.040130615234375,increases,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+396,24,16.5,0.00157928466796875,increases,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+397,207,45.5,0.1593780517578125,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+398,21,85.0,0.70855712890625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+399,145,69.5,0.522613525390625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+400,195,82.5,0.6507492065429688,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+401,6,45.0,0.08142852783203125,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+402,20,14.0,0.0008392333984375,increases,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+403,9,67.0,0.44229888916015625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+404,22,52.0,0.2633209228515625,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+405,143,78.0,0.5152778625488281,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+406,183,63.0,0.820892333984375,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+407,26,58.0,0.24620819091796875,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+408,181,31.5,0.12054443359375,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+409,107,20.0,0.00141143798828125,increases,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+410,4,11.0,0.0537109375,not significant,20230613_105657_standard_comp_to_training_D2_subj_1-4_t4b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+411,5,8.0,0.6875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,interneuron
+412,290,4.0,0.21875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+413,192,1.0,0.0625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+414,172,3.0,0.15625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+415,248,1.0,0.0625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+416,12,8.0,0.6875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+417,295,8.0,0.6875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,interneuron
+418,44,5.0,0.3125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+419,76,10.0,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+420,86,4.0,0.21875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+421,176,7.0,0.5625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+422,229,0.0,0.25,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+423,75,4.0,0.875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+424,0,5.0,0.3125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+425,245,1.0,0.125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+426,289,10.0,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+427,175,7.0,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+428,154,6.5,1.0,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+429,220,1.0,0.125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+430,6,6.0,0.4375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+431,14,37.5,0.3909912109375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+432,126,44.0,0.625732421875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+433,369,42.0,0.83935546875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+434,18,34.0,0.267578125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+435,13,40.0,0.463134765625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+436,391,43.0,0.892578125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+437,331,37.0,0.3575439453125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+438,119,50.5,0.9515380859375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+439,12,26.0,0.10400390625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+440,373,33.5,0.267578125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+441,376,39.5,0.7353515625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+442,34,34.5,0.2957763671875,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+443,88,37.5,0.3909912109375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+444,21,20.0,0.080322265625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+445,22,46.0,0.71484375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+446,298,31.0,0.1937255859375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,interneuron
+447,251,34.0,0.454833984375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+448,285,46.5,0.7608642578125,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+449,383,28.5,0.2734375,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+450,175,35.5,0.85009765625,not significant,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+451,390,11.5,0.0341796875,increases,20230614_114041_standard_comp_to_training_D3_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+452,106,10.0,1.0,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+453,133,0.0,0.03125,decreases,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+454,120,8.0,0.6875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+455,122,5.0,0.3125,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+456,186,4.0,0.21875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+457,128,9.0,0.84375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+458,9,9.0,0.84375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+459,18,8.0,0.6875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+460,180,1.0,0.0625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+461,43,3.0,0.15625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+462,193,6.0,0.4375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+463,68,7.0,0.5625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+464,89,2.0,0.375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+465,151,7.5,0.6875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,interneuron
+466,67,6.0,0.4375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+467,46,3.0,0.15625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+468,13,5.0,0.3125,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+469,90,7.5,0.6875,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+470,76,4.0,0.4375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+471,53,34.0,0.454833984375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+472,63,40.0,0.7353515625,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+473,64,27.0,0.38037109375,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+474,61,28.0,0.7001953125,not significant,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+475,0,,,,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,n/a
+476,17,65.5,0.25792694091796875,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+477,43,24.5,0.0033416748046875,increases,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+478,25,39.5,0.088653564453125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+479,35,47.5,0.1083831787109375,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+480,16,30.5,0.01593017578125,increases,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+481,34,64.0,0.22532272338867188,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+482,47,91.5,0.9217147827148438,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+483,20,57.0,0.22875213623046875,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+484,95,91.5,0.9217147827148438,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+485,73,77.0,0.48996734619140625,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,interneuron
+486,57,75.0,0.963226318359375,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+487,90,75.5,0.7018814086914062,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+488,46,92.5,0.9529838562011719,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+489,105,82.0,0.6225624084472656,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+490,39,75.0,0.4413337707519531,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+491,86,80.0,0.83172607421875,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+492,115,81.0,0.5948867797851562,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+493,72,84.0,0.9661178588867188,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+494,114,39.0,0.14385986328125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+495,49,69.0,0.49507904052734375,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+496,42,49.0,0.06628799438476562,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+497,48,66.0,0.4171142578125,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+498,110,83.0,0.6507492065429688,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+499,52,75.5,0.4653167724609375,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+500,40,43.0,0.036067962646484375,increases,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+501,26,61.5,0.51708984375,not significant,20230617_115521_standard_comp_to_omission_D1_subj_1-2_t2b2L_box2_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+502,139,4.0,0.21875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+503,7,5.0,0.3125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+504,76,4.0,0.21875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+505,84,8.0,0.6875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+506,159,5.0,0.3125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+507,98,4.0,0.875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+508,141,5.0,0.625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+509,154,10.0,1.0,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+510,50,9.0,0.84375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+511,12,0.0,0.03125,decreases,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+512,48,5.0,0.625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+513,11,3.0,0.15625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+514,175,0.0,0.03125,decreases,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+515,128,4.0,0.21875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+516,90,5.0,0.3125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+517,137,4.5,0.3125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+518,161,9.0,0.84375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+519,65,25.0,0.090576171875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+520,123,38.0,0.635498046875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+521,103,12.0,0.008544921875,increases,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+522,83,24.0,0.146484375,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+523,118,35.5,0.541748046875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+524,93,36.5,0.90966796875,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+525,99,13.0,0.0107421875,increases,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+526,105,12.0,0.0673828125,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+527,87,28.5,0.4697265625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+528,19,15.0,0.0166015625,increases,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+529,9,36.0,0.3258056640625,not significant,20230618_100636_standard_comp_to_omission_D2_subj_1-4_t4b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+530,252,40.5,0.786865234375,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+531,44,12.0,0.0042724609375,increases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+532,263,2.0,0.00018310546875,increases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+533,262,35.0,0.1688232421875,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+534,282,55.5,0.846923828125,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+535,134,56.0,0.846923828125,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+536,274,8.0,0.00152587890625,increases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+537,186,19.0,0.0352783203125,increases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+538,227,36.5,0.207763671875,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+539,250,53.5,0.76153564453125,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+540,11,45.0,0.6697998046875,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+541,132,21.5,0.0579833984375,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+542,268,22.0,0.0301513671875,increases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+543,275,2.0,0.00018310546875,increases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+544,187,1.0,0.0001220703125,increases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+545,271,32.0,0.216552734375,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+546,255,37.0,0.3575439453125,not significant,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+547,272,0.0,0.0001220703125,decreases,20230619_115321_standard_comp_to_omission_D3_subj_1-4_t3b3L_box2_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+548,0,,,,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,1-1,10s lose vs 10s baseline,n/a
+549,42,38.5,0.684814453125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+550,207,29.0,0.4697265625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+551,262,30.0,0.5185546875,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+552,144,40.0,0.7353515625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+553,41,21.0,0.09423828125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+554,162,10.0,0.010498046875,increases,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+555,48,40.0,0.7353515625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+556,45,41.5,0.83935546875,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,interneuron
+557,68,25.0,0.30126953125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,interneuron
+558,259,42.0,0.83935546875,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+559,153,36.5,0.587890625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+560,269,31.0,0.339599609375,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+561,53,37.0,0.587890625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+562,168,19.0,0.431640625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+563,58,36.0,0.85009765625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+564,258,38.5,0.684814453125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+565,14,13.0,0.0830078125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+566,241,38.0,0.9697265625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+567,245,38.0,0.9697265625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+568,28,38.5,0.684814453125,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+569,43,38.5,1.0,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,interneuron
+570,124,44.0,0.946044921875,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+571,221,45.0,1.0,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+572,244,30.0,0.8310546875,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+573,227,7.5,0.0244140625,increases,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+574,226,32.0,0.375732421875,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+575,266,32.5,0.414306640625,not significant,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+576,36,42.0,0.0599365234375,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+577,17,37.0,0.03423309326171875,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+578,7,59.0,0.2645263671875,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+579,6,24.0,0.0055999755859375,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+580,37,78.0,0.7660293579101562,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+581,84,12.5,0.00067138671875,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+582,76,49.0,0.11870574951171875,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+583,24,33.0,0.02081298828125,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+584,16,40.0,0.088653564453125,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+585,13,72.0,0.5798416137695312,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+586,47,53.5,0.18146514892578125,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+587,82,8.0,0.0003814697265625,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+588,46,69.0,0.49507904052734375,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+589,26,64.5,0.6112213134765625,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+590,86,41.0,0.17535400390625,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+591,89,30.0,0.0138702392578125,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+592,15,78.5,0.7987060546875,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+593,74,79.0,0.7987060546875,not significant,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+594,22,1.5,9.1552734375e-05,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+595,87,10.0,0.00032806396484375,increases,20230621_111240_standard_comp_to_omission_D5_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+596,110,102.0,0.9272785186767578,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,interneuron
+597,115,66.5,0.2753410339355469,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+598,1,84.0,0.4523754119873047,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+599,15,57.0,0.22875213623046875,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+600,148,71.0,0.550872802734375,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+601,2,18.5,0.431640625,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+602,113,26.5,1.0,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+603,77,34.0,0.267578125,not significant,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-1_t1b3L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+604,0,,,,20230622_110832_standard_comp_to_both_rewarded_D1_subj_1-2_t3b3L_box1_merged.rec,1-2,10s lose vs 10s baseline,n/a
+605,0,,,,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-2_t1b2L_box1_merged.rec,1-2,10s lose vs 10s baseline,pyramidal
+606,109,75.0,0.2773551940917969,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+607,114,51.0,0.04405403137207031,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+608,176,69.0,0.1893482208251953,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+609,150,58.0,0.24620819091796875,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+610,173,40.0,0.013616561889648438,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+611,177,93.0,0.6742229461669922,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+612,152,77.5,0.7660293579101562,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+613,164,30.0,0.007144927978515625,increases,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+614,158,103.0,0.956329345703125,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+615,133,83.0,0.6507492065429688,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+616,154,50.5,0.243499755859375,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+617,119,91.0,0.6215133666992188,not significant,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+618,0,,,,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,1-1,10s lose vs 10s baseline,pyramidal
+619,141,67.0,0.979949951171875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+620,32,14.0,0.00335693359375,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,interneuron
+621,243,63.0,0.820892333984375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+622,253,46.5,0.48870849609375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+623,227,31.5,0.12054443359375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+624,115,51.0,0.638671875,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+625,250,44.5,0.252227783203125,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+626,17,46.0,0.274444580078125,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+627,15,52.5,0.7197265625,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+628,213,30.5,0.1937255859375,not significant,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+629,148,5.0,0.001220703125,increases,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,1-4,10s lose vs 10s baseline,pyramidal
+630,18,16.0,0.84375,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,interneuron
+631,9,15.0,0.7421875,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+632,20,17.0,0.9453125,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+633,154,17.0,0.9453125,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+634,123,9.0,0.25,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+635,115,11.0,0.3828125,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+636,117,7.5,0.6875,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+637,150,11.0,0.3828125,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+638,13,9.0,0.46875,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+639,190,14.0,1.0,not significant,20240320_142408_alone_comp_subj_3-1_t6b6_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+640,124,34.0,0.7333984375,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+641,148,3.0,0.0048828125,increases,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+642,45,17.5,0.10986328125,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+643,146,33.0,1.0,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+644,109,20.0,0.2783203125,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+645,60,19.0,0.431640625,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+646,67,36.0,0.85009765625,not significant,20240320_142408_alone_comp_subj_3-3_t5b5_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+647,9,51.5,0.433197021484375,not significant,20240320_171038_alone_comp_subj_4-2_t6b6_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+648,56,47.5,0.190093994140625,not significant,20240320_171038_alone_comp_subj_4-2_t6b6_merged.rec,4-2,10s lose vs 10s baseline,interneuron
+649,42,54.0,0.104156494140625,not significant,20240320_171038_alone_comp_subj_4-2_t6b6_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+650,33,42.0,0.19281005859375,not significant,20240320_171038_alone_comp_subj_4-2_t6b6_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+651,0,,,,20240320_171038_alone_comp_subj_4-3_t5b5_merged.rec,4-3,10s lose vs 10s baseline,n/a
+652,15,101.0,0.8983173370361328,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+653,3,27.5,0.243896484375,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+654,101,86.0,0.49800872802734375,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+655,47,96.0,0.7561664581298828,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+656,89,60.0,0.09730720520019531,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+657,72,69.0,0.312408447265625,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+658,103,93.5,0.9843215942382812,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+659,18,69.0,0.7466583251953125,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+660,60,81.0,0.8650436401367188,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+661,76,69.0,0.49507904052734375,not significant,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,3-3,10s lose vs 10s baseline,pyramidal
+662,0,,,,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,3-4,10s lose vs 10s baseline,n/a
+663,0,,,,20240322_160946_alone_comp_subj_4-3_t6b6_merged.rec,4-3,10s lose vs 10s baseline,n/a
+664,68,90.0,0.8595733642578125,not significant,20240323_122227_alone_comp_subj_5-2_t6b6_merged.rec,5-2,10s lose vs 10s baseline,pyramidal
+665,32,73.0,0.3954620361328125,not significant,20240323_122227_alone_comp_subj_5-2_t6b6_merged.rec,5-2,10s lose vs 10s baseline,pyramidal
+666,72,77.0,0.48996734619140625,not significant,20240323_122227_alone_comp_subj_5-2_t6b6_merged.rec,5-2,10s lose vs 10s baseline,pyramidal
+667,52,76.0,0.7018814086914062,not significant,20240323_122227_alone_comp_subj_5-2_t6b6_merged.rec,5-2,10s lose vs 10s baseline,pyramidal
+668,69,31.0,0.05767822265625,not significant,20240323_122227_alone_comp_subj_5-2_t6b6_merged.rec,5-2,10s lose vs 10s baseline,pyramidal
+669,81,59.0,0.4306793212890625,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+670,88,67.0,0.677703857421875,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+671,80,20.0,0.0055694580078125,increases,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+672,8,17.0,0.5703125,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+673,4,25.0,0.0128631591796875,increases,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,interneuron
+674,12,56.0,0.352874755859375,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+675,32,72.0,0.8536376953125,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+676,37,24.0,0.021392822265625,increases,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+677,62,56.5,0.890380859375,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+678,49,71.5,0.8536376953125,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,interneuron
+679,25,40.5,0.0983734130859375,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+680,24,54.0,0.3060455322265625,not significant,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,3-1,10s lose vs 10s baseline,pyramidal
+681,0,,,,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3-4,10s lose vs 10s baseline,n/a
+682,42,20.0,0.4921875,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,interneuron
+683,27,22.5,0.6953125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+684,54,11.0,0.10546875,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+685,18,22.0,0.625,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+686,0,24.5,0.845703125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+687,49,25.0,0.845703125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+688,81,23.0,0.6953125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+689,75,7.0,0.1484375,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+690,68,15.5,0.49609375,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+691,4,19.0,0.431640625,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,pyramidal
+692,24,24.0,0.76953125,not significant,20240323_165815_alone_comp_subj_4-2_t5b5_merged.rec,4-2,10s lose vs 10s baseline,interneuron

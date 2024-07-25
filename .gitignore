@@ -4,3 +4,6 @@ rcecollection.pkl
 spike_analysis.pkl
 waveform_id/Rubbish/test1/
 waveform_id/Rubbish/test2/
+__pycache__/
+*.dat
+*.npy

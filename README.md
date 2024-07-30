@@ -1,10 +1,22 @@
-# dominance_strain_comparison
+# All of Tyler's Notebooks & Data
 
- This repository holds all the scripts (in python and R) that were used for data analysis and figure creation for the dominance strain comparison manuscript.
- Full disclosure: this repository was reorganized with no double checking about dependencies in terms of calling data or other code; so be ware that that could be an issue while running things. 
- Best MC  
+ This repository holds all the scripts (in python) and data that were used for data analysis and figure creation for the the Reward Competition Extension project, as well as various other useful things.
+ Full disclosure: this repository was reorganized with no double checking about dependencies in terms of calling data or other code; so be aware that there could be an issue while running things. 
+
+ ## For a Tutorial of How Most of the EPhys Data was Processed, go to `General_ephys_notebooks\Tutorial_for_multirecording_spikeanalysis.ipynb`.
+  I recommend downloading the whole repo and running the notebook step by step in the base directory, so you can see how the `multirecording_spikeanalysis.py` script works.
 
  ## Directory Structure
+
+`Behavioral_clustering`
+`General_ephys_notebooks`
+`Move_edit_data_notebooks`
+`Neuronal_classifying`
+`Newest_UMAP`
+`leo_poster`
+`recordings`
+`rubbish`
+
 
 - `data/`: Contains raw data (reward comp has been updated)
 - `mpc_scripts/`: Contains med pc scripts used during the reward competition and training (written in med pc code) author: mixed

@@ -3,7 +3,7 @@
  This repository holds all the scripts (in python) and data that were used for data analysis and figure creation for the the Reward Competition Extension project, as well as various other useful things.
  Full disclosure: this repository was reorganized with no double checking about dependencies in terms of calling data or other code; so be aware that there could be an issue while running things. 
 
- ## For a Tutorial of How Most of the EPhys Data was Processed, go to `General_ephys_notebooks\Tutorial_for_multirecording_spikeanalysis.ipynb`.
+ ## For a Tutorial of How Most of the EPhys Data was Processed, go to `General_ephys_notebooks\Tutorial_for_multirecording_spikeanalysis.ipynb`
   I recommend downloading the whole repo and running the notebook step by step in the base directory, so you can see how the `multirecording_spikeanalysis.py` script works.
 
  ## Directory Structure

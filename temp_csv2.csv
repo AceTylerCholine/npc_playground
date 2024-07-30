@@ -4,7 +4,7 @@
 2,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,13,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",interneuron
 3,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,17,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 4,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,19,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
-5,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,24,['competitive_lose'],"['competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
+5,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,24,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 6,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,33,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 7,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,36,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 8,20230612_101430_standard_comp_to_training_D1_subj_1-3_t3b3L_box2_merged.rec,43,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
@@ -25,7 +25,7 @@
 23,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,46,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 24,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,50,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 25,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,51,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
-26,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,52,"['competitive_lose', 'competitive_win', 'no_comp_win']",['no_comp_lose'],pyramidal
+26,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,52,"['competitive_lose', 'competitive_win']","['no_comp_lose', 'no_comp_win']",pyramidal
 27,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,58,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 28,20230612_101430_standard_comp_to_training_D1_subj_1-4_t4b2L_box1_merged.rec,61,['no_comp_win'],"['competitive_lose', 'competitive_win', 'no_comp_lose']",pyramidal
 29,20230612_112630_standard_comp_to_training_D1_subj_1-2_t2b2L_box1_merged.rec,1,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
@@ -145,13 +145,13 @@
 143,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,128,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 144,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,133,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 145,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,151,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",interneuron
-146,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,180,['competitive_lose'],"['competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
+146,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,180,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 147,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,186,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 148,20230616_111904_standard_comp_to_training_D4_subj_1-2_t2b2L_box2_merged.rec,193,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 149,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,53,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 150,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,61,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 151,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,63,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
-152,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,64,"['competitive_win', 'no_comp_win']","['competitive_lose', 'no_comp_lose']",pyramidal
+152,20230616_111904_standard_comp_to_training_D4_subj_1-4_t4b3L_box1_merged.rec,64,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 153,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,3,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 154,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,4,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 155,20230617_115521_standard_comp_to_omission_D1_subj_1-1_t1b3L_box1_merged.rec,5,['competitive_lose'],"['competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
@@ -200,7 +200,7 @@
 198,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,12,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 199,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,48,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 200,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,50,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
-201,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,76,"['competitive_lose', 'no_comp_win']","['competitive_win', 'no_comp_lose']",pyramidal
+201,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,76,['competitive_lose'],"['competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 202,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,84,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 203,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,90,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 204,20230618_100636_standard_comp_to_omission_D2_subj_1-1_t1b2L_box2_merged.rec,98,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
@@ -247,7 +247,7 @@
 245,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,98,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 246,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,100,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 247,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,119,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
-248,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,121,['competitive_lose'],"['competitive_win', 'no_comp_win']",pyramidal
+248,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,121,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 249,20230620_114347_standard_comp_to_omission_D4_subj_1-1_t1b2L_box_2_merged.rec,126,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 250,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,14,[],"['competitive_lose', 'competitive_win', 'no_comp_lose']",pyramidal
 251,20230620_114347_standard_comp_to_omission_D4_subj_1-2_t3b3L_box_1_merged.rec,28,[],"['competitive_lose', 'competitive_win', 'no_comp_lose']",pyramidal
@@ -360,7 +360,7 @@
 358,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,173,[],"['competitive_lose', 'no_comp_lose']",pyramidal
 359,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,176,[],"['competitive_lose', 'no_comp_lose']",pyramidal
 360,20230624_105855_standard_comp_to_both_rewarded_D3_subj_1-4_t3b3L_box1_merged.rec,177,[],"['competitive_lose', 'no_comp_lose']",pyramidal
-361,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,0,['no_comp_lose'],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
+361,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,0,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 362,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,7,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 363,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,11,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",interneuron
 364,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,13,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",interneuron
@@ -376,7 +376,7 @@
 374,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,144,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 375,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,148,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 376,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,155,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
-377,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,164,['competitive_lose'],"['competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
+377,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-1_t1b2L_box1_merged.rec,164,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 378,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,15,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 379,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,17,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 380,20230625_112913_standard_comp_to_both_rewarded_D4_subj_1-4_t3b3L_box1_merged.rec,32,['competitive_lose'],"['competitive_win', 'no_comp_lose', 'no_comp_win']",interneuron
@@ -441,7 +441,7 @@
 439,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,89,[],"['competitive_lose', 'competitive_win', 'no_comp_lose']",pyramidal
 440,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,101,['competitive_win'],"['competitive_lose', 'no_comp_lose']",pyramidal
 441,20240322_120625_alone_comp_subj_3-3_t6b6_merged.rec,103,[],"['competitive_lose', 'competitive_win', 'no_comp_lose']",pyramidal
-442,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,8,['competitive_win'],"['competitive_lose', 'no_comp_win']",pyramidal
+442,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,8,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 443,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,14,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 444,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,32,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 445,20240322_120625_alone_comp_subj_3-4_t5b5_merged.rec,39,[],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
@@ -486,7 +486,7 @@
 484,20240323_144517_alone_comp_subj_3-1_t5b5_merged.rec,88,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 485,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,1,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal
 486,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,3,['no_comp_lose'],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
-487,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,4,"['competitive_win', 'no_comp_lose']","['competitive_lose', 'no_comp_win']",pyramidal
+487,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,4,['no_comp_lose'],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 488,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,7,['no_comp_lose'],"['competitive_lose', 'competitive_win', 'no_comp_win']",pyramidal
 489,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,27,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",interneuron
 490,20240323_144517_alone_comp_subj_3-4_t6b6_merged.rec,32,[],"['competitive_lose', 'competitive_win', 'no_comp_lose', 'no_comp_win']",pyramidal

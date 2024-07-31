@@ -8,14 +8,14 @@
 
  ## Directory Structure
 
-`Behavioral_clustering`
-`General_ephys_notebooks`
-`Move_edit_data_notebooks`
-`Neuronal_classifying`
-`Newest_UMAP`
-`leo_poster`
-`recordings`
-`rubbish`
+- `Behavioral_clustering`:
+- `General_ephys_notebooks`:
+- `Move_edit_data_notebooks`:
+- `Neuronal_classifying`:
+- `Newest_UMAP`:
+- `leo_poster`: All of the scripts to make the single-unit analysis figures for Leo's 2024 GRC poster, as well as the completed figures (although the labels/titles are edited on BioRender)
+- `recordings`:
+- `rubbish`:
 
 
 - `data/`: Contains raw data (reward comp has been updated)

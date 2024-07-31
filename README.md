@@ -14,6 +14,7 @@
 - `Neuronal_classifying`:
 - `Newest_UMAP`:
 - `leo_poster`: All of the scripts to make the single-unit analysis figures for Leo's 2024 GRC poster, as well as the completed figures (although the labels/titles are edited on BioRender)
+ - `Cohort2+3_Alone_Comp_Venn.ipynb`, `Cohort2+3_LinePlots.ipynb`, `Cohort2+3_PiePlots.ipynb`: These notebooks use all of Cohort 2 + Alone Comp from Cohort 3 to make the Venn Diagram, Line Plots, & Pie Plots
 - `recordings`:
 - `rubbish`:
 

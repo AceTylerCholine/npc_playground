@@ -8,6 +8,19 @@
 
  ## Directory Structure
 
+- Base Directory:
+    - `multirecording_spikeanalysis.py`: Current version of Padilla-Coreano Lab ephys script
+    - `multirecording_spikeanalysis_old.py`: Original ephys script I based the edits off of
+    - `multirecording_spikeanalysis_edit.py`: Lots of minor spacing edits and added 'create_spiketrain_df' function
+    - `multirecording_spikeanalysis_edit2.py`: Same as `multirecording_spikeanalysis_old.py`, but added 'create_spiketrain_df' function
+    - `multirecording_spikeanalysis_edit4.py`: Same as `multirecording_spikeanalysis_edit2.py`, but 1 line edit to 'create_spiketrain_df' function
+    - `spikeanal.py`: Similar to `multirecording_spikeanalysis_old.py` but also:
+        - spacing edits
+        - w_assessment function edited from `except TypeError: 'NaN'` to `else: 'not significant`
+        - smoothing_window defaults to 250 instead of None
+    - `rce_pilot_2_per_video_trial_labels.xlsx`: Spreadsheet of event outcomes (e.g.: win/lose/rewarded) and timestamps for Cohort 2
+    - `rce_pilot_3_alone_comp_per_video_trial_labels.xlsx`: Spreadsheet of event outcomes (e.g.: win/lose/rewarded) and timestamps for Cohort 3
+    - `combined_excel_file.xlsx`: Python merge of 2 behavior spreadsheets (from `General_ephys_notebooks\Merge_spreadsheets.ipynb`)
 - `Behavioral_clustering`:
 - `General_ephys_notebooks`:
 - `Move_edit_data_notebooks`:

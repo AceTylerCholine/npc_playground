@@ -36,6 +36,12 @@
     - `Test_funcs.ipynb`: A place to test functions and the structure of data files
  
 - `General_ephys_notebooks`:
+    - `Tutorial_for_multirecording_spikeanalysis.ipynb`: ### This is the most important notebook in this repo ###
+        - There are lots of markdown and comments to explain each step of the notebook
+        - Lines 1-8 are done at the beginning of almost all of my analyses to: import ephys data, import behavior data, create a dict from behavior data, create a class object from ephys data, and to assign the behavior dict to the ephys class object
+        - The rest of the notebook doesn't provide an example/instruction on how to use the methods from the object to analyze the data, but instead explains what the structure of the object looks like, and how some of the methods work
+    - `Alert_Vs_Dispense.ipynb`: Separately looked at Cohort 2 Omission & Both_Rewarded recordings to determine if there was a difference in neuronal responses to the first 5 seconds of the 10 second events (tone but no reward) vs the last 5 seconds (after reward dispensed). If neurons are responding to 'winning' during the 10s event, but don't technically win until after the first 5 seconds, should we only be looking at the 2nd half of the event? Or are the neurons potentially deciding to win during the first 5 seconds and we only need to look at the first half? My conclusion was that although the neurons that responded to the first 5 seconds were regularly not the same ones responding to the 2nd 5 seconds, more neurons were responding to the whole 10 seconds than were responding to both halves individually. So if your specific question is what neurons respond to 'winning' or 'losing', it might be most optimal to look at the whole 10s window.
+  
 - `Move_edit_data_notebooks`:
 - `Neuronal_classifying`:
 - `Newest_UMAP`:

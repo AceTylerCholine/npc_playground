@@ -36,7 +36,7 @@
     - `Test_funcs.ipynb`: A place to test functions and the structure of data files
  
 - `General_ephys_notebooks`:
-    - `Tutorial_for_multirecording_spikeanalysis.ipynb`: ### This is the most important notebook in this repo ###
+    - `Tutorial_for_multirecording_spikeanalysis.ipynb`: ***This is the most important notebook in this repo***
         - There are lots of markdown and comments to explain each step of the notebook
         - Lines 1-8 are done at the beginning of almost all of my analyses to: import ephys data, import behavior data, create a dict from behavior data, create a class object from ephys data, and to assign the behavior dict to the ephys class object
         - The rest of the notebook doesn't provide an example/instruction on how to use the methods from the object to analyze the data, but instead explains what the structure of the object looks like, and how some of the methods work

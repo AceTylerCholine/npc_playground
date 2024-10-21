@@ -40,11 +40,19 @@
         - Lines 1-8 are done at the beginning of almost all of my analyses to: import ephys data, import behavior data, create a dict from behavior data, create a class object from ephys data, and to assign the behavior dict to the ephys class object
         - The rest of the notebook doesn't provide an example/instruction on how to use the methods from the object to analyze the data, but instead explains what the structure of the object looks like, and how some of the methods work
     - `Alert_Vs_Dispense.ipynb`: Separately looked at Cohort 2 Omission & Both_Rewarded recordings to determine if there was a difference in neuronal responses to the first 5 seconds of the 10 second events (tone but no reward) vs the last 5 seconds (after reward dispensed). If neurons are responding to 'winning' during the 10s event, but don't technically win until after the first 5 seconds, should we only be looking at the 2nd half of the event? Or are the neurons potentially deciding to win during the first 5 seconds and we only need to look at the first half? My conclusion was that although the neurons that responded to the first 5 seconds were regularly not the same ones responding to the 2nd 5 seconds, more neurons were responding to the whole 10 seconds than were responding to both halves individually. So if your specific question is what neurons respond to 'winning' or 'losing', it might be most optimal to look at the whole 10s window.
+    - ... Several more. Will update soon to explain the rest.
   
-- `Move_edit_data_notebooks`:
-- `Neuronal_classifying`:
-- `Newest_UMAP`:
+- `Move_edit_data_notebooks`: Scripts for moving data files
+    - `Delete_dot_phy.ipynb`: After manual curation of spikes with Phy, a `.phy` directory is created. This folder is incredibly large with thousands of files and directories and is just temporary storage for Phy. Phy states that these directories can be deleted and a new directory will be made each time Phy is opened. Because this folder was redundant yet made transferring data very difficult, this script goes through every recording and deletes the .phy folder. 
+    - `Move_RCE_Data.ipynb`: To use the multirecording_spikeanalysis.py script, all you need from each ephys recording are 3 files: cluster_group.tsv, spike_clusters.npy, spike_times.npy. This script will move just those 3 files and the parent directories (recording that they came from), so you don't have to move the whole 5-8 GB directory for each recording.
+- `Neuronal_classifying`: Used WaveMAP protocol to determine putative cell types (e.g. pyramidal vs interneuron)
+    - Source: Lee, K., Carr, N., Perliss, A., & Chandrasekaran, C. (2023). WaveMAP for identifying putative cell types from in vivo electrophysiology. STAR Protocols, 4(2), 102320. https://doi.org/10.1016/j.xpro.2023.102320
+    - Cool results! Uses full spike sorted data (~7GB/recording) and essentially performs UMAP on the waveforms. Waveform is the only input, no spike rates or anything like that, yet it accurately and consistently groups fast-spiking units (putative interneurons) into a single very separate group!
+    - Open the folder to view its own ReadMe for more information, but its important to note that the data needed for this is very large and not stored on this repo. Also, because UMAP uses randomization, even with setting a seed, the results were slightly different depending on the machine you ran it on, but the overall picture didn't change.
+- `Newest_UMAP`: Actual notebook and results of the WaveMAP protocol on this data
 - `leo_poster`: All of the scripts to make the single-unit analysis figures for Leo's 2024 GRC poster, as well as the completed figures (although the labels/titles are edited on BioRender)
     - `Cohort2+3_Alone_Comp_Venn.ipynb`, `Cohort2+3_LinePlots.ipynb`, `Cohort2+3_PiePlots.ipynb`: These notebooks use all of Cohort 2 + Alone Comp from Cohort 3 to make the Venn Diagram, Line Plots, & Pie Plots
 - `recordings`:
+    - All of the processed ephys data. Pre-processed/raw data is ~7GB per recording and stored elsewhere. These data store 20 KHz spike times for every unit in each recording. There are multiple subdirectories depending on the question you're asking. All of the recordings are under /from_cyborg/ but there are also copies in the other directories like /all_non_novel/ which is what I typically used since the analysis scripts currently can't handle recordings with more than 2 mice.
 - `rubbish`:
+    - Junk drawer. A place to store old/unused scripts etc that I didn't want to actually delete.

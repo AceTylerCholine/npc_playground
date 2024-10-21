@@ -16,7 +16,7 @@
     - `multirecording_spikeanalysis_old.py`: Original ephys script I based the edits off of
     - `spikeanal.py`: Similar to `multirecording_spikeanalysis_old.py` but also:
         - spacing edits
-        - **w_assessment** function edited from `except TypeError: 'NaN'` to `else: 'not significant`
+        - **w_assessment** function edited from `except TypeError: 'NaN'` to `else: 'not significant'`
         - **smoothing_window** defaults to 250 instead of None
     - `rce_pilot_2_per_video_trial_labels.xlsx`: Spreadsheet of event outcomes (e.g.: win/lose/rewarded) and timestamps for Cohort 2
     - `rce_pilot_3_alone_comp_per_video_trial_labels.xlsx`: Spreadsheet of event outcomes (e.g.: win/lose/rewarded) and timestamps for Cohort 3

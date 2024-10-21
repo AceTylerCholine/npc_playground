@@ -13,7 +13,7 @@
     - `multirecording_spikeanalysis_old.py`: Original ephys script I based the edits off of
     - `multirecording_spikeanalysis_edit.py`: Lots of minor spacing edits and added '*create_spiketrain_df*' function
     - `multirecording_spikeanalysis_edit2.py`: Same as `multirecording_spikeanalysis_old.py`, but added '*create_spiketrain_df*' function
-    - `multirecording_spikeanalysis_edit4.py`: Same as `multirecording_spikeanalysis_edit2.py`, but 1 line edit to '*create_spiketrain_df*' function
+    - `multirecording_spikeanalysis_edit3.py`: Same as `multirecording_spikeanalysis_edit2.py`, but 1 line edit to '*create_spiketrain_df*' function
     - `spikeanal.py`: Similar to `multirecording_spikeanalysis_old.py` but also:
         - spacing edits
         - **w_assessment** function edited from `except TypeError: 'NaN'` to `else: 'not significant`
